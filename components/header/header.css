@@ -1,0 +1,37 @@
+
+.header{
+    /* background: var(--gold-finger); */
+    padding: 30px 0;
+}
+.header-layout{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: auto;
+    background: wheat;
+    border-radius: 50%;
+}
+.logo img {
+ width: 100%;
+ height: auto;
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+} 
+nav ul li{
+
+    display: inline-block;
+}
+nav ul li a{
+   text-decoration: none;
+   color: var(--lead);
+}
