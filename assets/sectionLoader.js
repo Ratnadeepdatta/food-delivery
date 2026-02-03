@@ -48,6 +48,11 @@ document.addEventListener("DOMContentLoaded", () =>{
     "components/footer/footer.js",
     )
 
+     loadSection("hero",
+    "pages/home/hero.html",
+    "pages/home/hero.css",
+    "pages/home/hero.js",
+    )
     
     
 }) 
