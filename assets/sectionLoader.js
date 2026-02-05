@@ -49,9 +49,9 @@ document.addEventListener("DOMContentLoaded", () =>{
     )
 
      loadSection("hero",
-    "pages/home/hero.html",
-    "pages/home/hero.css",
-    "pages/home/hero.js",
+    "pages/home/hero/hero.html",
+    "pages/home/hero/hero.css",
+    "pages/home/hero/hero.js",
     )
     
     

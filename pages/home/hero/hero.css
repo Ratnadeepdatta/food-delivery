@@ -1,0 +1,33 @@
+.hero{
+    height: 80vh;
+    width: 100%;
+    padding: 20px;
+   background:#000 ; 
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.hero-text{
+    color: #fff;
+}
+
+.hero-img{
+    background: #fff;
+}
+.hero-img img{
+    height: auto;
+    width: 500px;
+ background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero .hero-text{
+    padding: 50px;
+    background: #862525;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+}
