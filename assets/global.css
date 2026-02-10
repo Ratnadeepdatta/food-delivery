@@ -1,10 +1,11 @@
 
 :root{
-    --lead:#212121;
-    --gold-finger:#f2bd12;
-    --eye-ball:#fffbf7;
-    --hint-yellow:#fcf1cc;
+    --hero-title:#F1D6C5;
+    --hero-p:#E8CDBC;
+    --btn-bg:#ff8e28;
     --white:#fff;
+    --black:#0E1318;
+
     --nav-color:#77300a;
 }
 

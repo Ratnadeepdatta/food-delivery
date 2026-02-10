@@ -125,23 +125,6 @@ nav ul li a:hover::after {
   display: none;
 }
 
-/* mobile menu */
-
-/* .menu-toggle{
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: self-end;
-    gap: 5px;
-    height: 20px;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-.menu-toggle .small{
-    width: 19px;
-} */
-
 @media screen and (max-width: 780px) {
   .desktop-menu {
     display: none;
@@ -150,7 +133,7 @@ nav ul li a:hover::after {
     width: 110px;
   }
   .mbtn {
-    display: none;
+    /* display: block; */
   }
 
   .hamburgar {
