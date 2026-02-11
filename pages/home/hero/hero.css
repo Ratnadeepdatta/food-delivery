@@ -7,6 +7,7 @@
   background-position: center;
   display: flex;
   justify-content: center;
+  padding: 120px 10px 0 10px;
 }
 
 .hero-container {
@@ -49,8 +50,8 @@
 }
 
 .hero-btn:hover {
-  background: var(--white);
-  color: var(--black);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4);
 }
 
 /* Image Section */
@@ -60,7 +61,7 @@
 }
 
 .hero-image img {
-  max-width: 85%;
+  max-width: 80%;
   height: auto;
   border-radius: 20px;
 }
