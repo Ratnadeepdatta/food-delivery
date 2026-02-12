@@ -41,7 +41,7 @@
   background: var(--btn-bg);
   color: var(--white);
   border: none;
-  border-radius: 6px;
+  border-radius: 18px;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -52,9 +52,9 @@
 .hero-btn:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4);
+
 }
 
-/* Image Section */
 .hero-image {
   flex: 1;
   text-align: right;
@@ -70,13 +70,21 @@
   .hero-container {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
   }
-
+.hero-text{
+  order: 2;
+  text-align: center;
+}
+.hero-btn{
+  align-self: center;
+}
   .hero-text h1 {
     font-size: 32px;
   }
 
   .hero-image {
     text-align: center;
+    order: 1;
   }
 }

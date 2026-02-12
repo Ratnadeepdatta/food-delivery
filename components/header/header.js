@@ -1,29 +1,16 @@
 
-// const header= document.getElementById("header");
-// window.addEventListener('scroll', () => {
-//     if(window.scrollY > 100){
-//         header.classList.add('scrolled');
-//     }
-//     else{
-//         header.classList.remove('scrolled');
-//     }
-// });
+const header = document.getElementById("header");
+let ticking = false;
 
-function initHeaderScroll() {
-  const header = document.querySelector(".header");
-
-  if (!header) return;
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 20) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  });
-}
-    initHeaderScroll();
-
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      header.classList.toggle("scrolled", window.scrollY > 40);
+      ticking = false;
+    });
+    ticking = true;
+  }
+}, { passive: true });
 
 
 // mobile menu
