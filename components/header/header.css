@@ -5,6 +5,7 @@
    z-index: 1000;
    position: fixed;
     /* height: 62px; */
+    /* border-bottom: 1px solid #E8CDBC ; */
 }
 .header-layout {
   display: flex;
