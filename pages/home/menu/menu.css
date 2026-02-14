@@ -1,101 +1,136 @@
+.food-carousel {
+    background: var(--bg-gray);
+    padding: 80px 0;
+}
 
-                .food-carousel {
-                    background: var(--bg-gray);
-                    padding: 80px 0;
-                }
+.section-title {
+    font-size: 25px;
+    margin-bottom: 50px;
+    text-align: center;
+}
 
-                .section-title {
-                    font-size: 25px;
-                    margin-bottom: 50px;
-                    text-align: center;
-                }
+.manu-container {
+    align-items: center;
+}
 
-                .manu-container {
-                    align-items: center;
-                }
-                .carousel-wrapper{
-                    position: relative;
-                    overflow: hidden;
-                }
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+}
 
-                .carousel-btn{
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    background: #ff9d2d;
-                    color: var(--bg-gray);
-                    height: 40px;
-                    width: 40px;
-                    border-radius: 40%;
-                    border: none;
-                    cursor: pointer;
-                    font-size: 16px;
-                }
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ff9d2d;
+    color: var(--bg-gray);
+    height: 40px;
+    width: 40px;
+    border-radius: 40%;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1005;
+}
 
-                .carousel-btn.prev {
-                left: 10px;
-                }
+.carousel-btn.prev {
+    left: 5px;
+}
 
-                .carousel-btn.next {
-                right: 10px;
-                } 
+.carousel-btn.next {
+    right: 5px;
+}
 
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
 
-                .carousel-track {
-                    display: flex;
-                    justify-content: center;
-                    gap: 20px;
-                    /* transition: transfrom 0.4s ease ;  */
-                }
+.food-card {
+    flex: 0 0 calc((100% - 60px) / 4); 
+    max-width: calc((100% - 60px) / 4);
+    padding: 50px 30px;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0.2rem 2.8rem rgb(36 36 36 / 5%);
+    position: relative;
+    z-index: 991;
+    transition: color 0.4s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
 
-                .food-card {
-                    max-width: 290px;
-                    padding: 50px 30px;
-                    background: var(--white);
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 10px;
-                    border-radius: 10px;
-                    box-shadow: 0 0.2rem 2.8rem rgb(36 36 36 / 5%);
-                    position: relative;
-                    z-index: 991;
-                    transition: color 0.4s ease;
-                    overflow: hidden;
-                    cursor: pointer;
-                }
-                .food-card h3{
-                    font-size: 18px;
-                    font-weight: 600;
-                }
-                .food-card p{
-                    font-size: 14px;
-                    align-items: center;
-                    color: rgba(0, 0, 0, 0.416);
-                }
-                .food-card::before {
-                    background-color: #ff9d2d;
-                    clip-path: polygon(0 40%, 100% 0%, 100% 100%, 0 100%);
-                    content: "";
-                    left: 0;
-                    bottom: 0;
-                    width: 100%;
-                    height: 150px;
-                    position: absolute;
-                    /* transform: scaleY(0); */
-                    transform-origin: bottom;
-                    transition: transform 0.5s ease;
-                    /* border-radius: 0px 0px 10px 10px; */
-                    z-index: -999;
-                }
+.food-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
 
-                .food-card:hover::before {
-                    background-color: #ff9d2d;
-                    transform: scaleY(5);
-                }
+.food-card p {
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.416);
+}
 
-                .food-card img {
-                    width: 100%;
-                    margin-top:20px ;
-                }
+.food-card::before {
+    background-color: #ff9d2d;
+    clip-path: polygon(0 40%, 100% 0%, 100% 100%, 0 100%);
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    /* transform: scaleY(0); */
+    transform-origin: bottom;
+    transition: transform 0.5s ease;
+    z-index: -999;
+}
+
+.food-card:hover::before {
+    background-color: #ff9d2d;
+    transform: scaleY(6);
+}
+
+.food-card img {
+    width: 100%;
+    margin-top: 20px;
+}
+
+@media (max-width: 992px){
+.food-card{
+    flex: 0 0 calc((100% - 20px) / 2); 
+    max-width: calc((100% - 20px) / 2);
+}
+}
+
+@media(max-width: 600px){
+    .food-carousel {
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.food-card h3 {
+    font-size: 17px;
+}
+    .food-card{
+      padding: 30px 15px;
+    }
+    .carousel-btn {
+        font-size: 14px;
+        height: 25px;
+        width: 25px;
+    }
+    .food-card p {
+    font-size: 13px;
+}
+}
