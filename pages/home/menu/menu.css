@@ -1,10 +1,11 @@
 .food-carousel {
     background: var(--bg-gray);
-    padding: 80px 0;
+    padding: 50px 20px 60px 20px ;
 }
 
 .section-title {
     font-size: 25px;
+    font-weight: 600;
     margin-bottom: 50px;
     text-align: center;
 }

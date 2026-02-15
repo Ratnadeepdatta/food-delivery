@@ -1,0 +1,21 @@
+.services{
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 110px;
+}
+.services-alltext{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.services-alltext h2 {
+font-size: 37px;
+font-weight: 600;
+}
+.services-alltext p{
+    font-size: 14px;
+    padding-right: 250px
+}
