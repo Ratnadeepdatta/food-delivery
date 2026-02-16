@@ -60,9 +60,14 @@ document.addEventListener("DOMContentLoaded", () =>{
     "pages/home/menu/menu.js",
     )
     
-    loadSection("services-container",
-      "pages/home/services/services.html",
-      "pages/home/services/services.css",
-      "pages/home/services/services.js",
+    loadSection("about-container",
+      "pages/home/about/about.html",
+      "pages/home/about/about.css",
+      "pages/home/about/about.js",
+    ) 
+    loadSection("shop-container",
+      "pages/home/shop/shop.html",
+      "pages/home/shop/shop.css",
+      "pages/home/shop/shop.js",
     )
 }) 

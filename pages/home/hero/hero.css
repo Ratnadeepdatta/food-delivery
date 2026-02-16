@@ -34,6 +34,7 @@
   font-size: 15px;
   color: var(--hero-p);
   line-height: 1.6;
+  padding-right: 130px;
 }
 
 .hero-btn {
@@ -74,15 +75,17 @@
   }
 .hero-text{
   order: 2;
-  text-align: center;
+  text-align: left;
 }
-.hero-btn{
+/* .hero-btn{
   align-self: center;
-}
+} */
   .hero-text h1 {
     font-size: 32px;
   }
-
+.hero-desc {
+  padding-right: 0;
+}
   .hero-image {
     text-align: center;
     order: 1;
