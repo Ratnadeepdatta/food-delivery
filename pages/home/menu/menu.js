@@ -6,11 +6,11 @@ let cards = document.querySelectorAll(".food-card");
 const visibleCards = 4;
 let currentIndex = 0;
 
-// Clone first 4 cards
+// Clone first 4 cards  
 for (let i = 0; i < visibleCards; i++) {
     const clone = cards[i].cloneNode(true);
     track.appendChild(clone);
-}
+ }
 
 //  Re-select cards AFTER cloning
 cards = document.querySelectorAll(".food-card");
