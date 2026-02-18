@@ -70,4 +70,9 @@ document.addEventListener("DOMContentLoaded", () =>{
       "pages/home/shop/shop.css",
       "pages/home/shop/shop.js",
     )
+     loadSection("right-container",
+      "pages/home/right/right.html",
+      "pages/home/right/right.css",
+      "pages/home/right/right.js",
+    )
 }) 

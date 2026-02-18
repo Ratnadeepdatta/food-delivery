@@ -1,82 +1,137 @@
-    .home-shop {
-        background: var(--bg-gray);
-        padding: 50px 20px;
-    }
+                .home-shop {
+                    background: var(--bg-gray);
+                    padding: 50px 20px;
+                }
 
-    .homeshops {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-    }
+                .homeshops {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 50px;
+                }
 
-    .shop-textdiv h2 {
-        font-size: 37px;
-        font-weight: 600;
-        margin-bottom: 8px;
-    }
+                .shop-textdiv h2 {
+                    font-size: 37px;
+                    font-weight: 600;
+                }
 
-    .shop-textdiv p {
-        font-size: 15px;
-        padding-right: 300px;
-        color: var(--description);
-    }
+                .shop-textdiv p {
+                    font-size: 15px;
+                    padding-right: 1000px;
+                    color: var(--description);
+                    margin: 5px 0px 15px 0px;
+                }
 
-    .shop-carousel {
-        display: flex;
-        gap: 20px;
-        transition: transform 0.5s ease;
-        justify-content: start;
-    }
+                .shop-carousel {
+                    display: flex;
+                    gap: 20px;
+                    transition: transform 0.5s ease;
+                    justify-content: start;
+                }
 
-    .shop-carousel-wrapper {
-        position: relative;
-        overflow: hidden;
-    }
+                .shop-carousel-wrapper {
+                    position: relative;
+                    overflow: hidden;
+                }
 
-    .shop-card {
-        flex: 0 0 calc((100% - 60px)/4);
-        max-width: calc((100% - 60px)/4);
-        /* background: wheat; */
-        background: var(--white);
-        padding: 50px 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: left;
-        gap: 10px;
-        border-radius: 10px;
-        box-shadow: 0 0.2rem 2.8rem rgb(36 36 36 / 5%);
-        /* position: relative; */
-        z-index: 991;
-        transition: color 0.4s ease;
-        overflow: hidden;
-        cursor: pointer;
-    }
+                .shop-card {
+                    flex: 0 0 calc((100% - 60px)/4);
+                    max-width: calc((100% - 60px)/4);
+                    background: var(--white);
+                    padding: 50px 30px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: left;
+                    gap: 10px;
+                    border-radius: 10px;
+                    box-shadow: 0 0.2rem 2.8rem rgb(36 36 36 / 5%);
+                    z-index: 991;
+                    transition: color 0.4s ease;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
 
-    .discount {
-        background: red;
-        color: var(--white);
-        padding: 5px 12px;
-        border-radius: 10px;
-        align-self: self-start;
-    }
+                .shop-card img {
+                    width: 100%;
+                }
 
-    .food-meta {
-        align-self: flex-start;
-    }
-.shop-foodTitle{
-    font-size: 18px;
-    padding: 7px 0;
-}
-    .rating-category {
-        color: var(--description);
-    }
+                .discount {
+                    background: red;
+                    color: var(--white);
+                    padding: 5px 12px;
+                    border-radius: 10px;
+                    align-self: self-start;
+                }
 
-    .price-row span {
-        color: var(--description);
-        font-size: 14px;
-        color: var(--btn-bg);
-    }
-    .price-row .old-price{
-        color: var(--description);
-    }
+                .food-meta {
+                    align-self: flex-start;
+                }
+
+                .shop-foodTitle {
+                    font-size: 18px;
+                    padding: 7px 0;
+                }
+
+                .rating-category {
+                    color: var(--description);
+                }
+
+                .price-row span {
+                    color: var(--description);
+                    font-size: 14px;
+                    color: var(--btn-bg);
+                }
+
+                .price-row .old-price {
+                    color: var(--description);
+                }
+
+                .star-rating i {
+                    font-size: 15px;
+                    color: #ccc;
+                    cursor: pointer;
+                }
+
+                .star-rating i.active {
+                    color: #ff9d2d;
+                }
+
+                @media (max-width:992px) {
+                    .shop-card {
+                        flex: 0 0 calc((100% - 20px) / 2);
+                        max-width: calc((100% - 20px) / 2);
+                    }
+                }
+
+                @media (max-width:768px) {
+                    .home-shop {
+                        padding: 50px 10px;
+                    }
+
+                    .shop-textdiv h2 {
+                        font-size: 30px;
+                    }
+
+                    .shop-textdiv p {
+                        padding-right: 0px;
+                    }
+
+                    .shop-card {
+                        padding: 30px 15px;
+                        gap: 20px;
+                    }
+                    .star-rating i {
+                    font-size: 12px;
+                }
+
+                .shop-foodTitle {
+                    font-size: 15px;
+                    padding: 7px 0;
+                }
+                 .rating-category {
+                    font-size: 13px;
+                }
+                 .price-row span {
+                    font-size: 12px;
+                }
+                }
