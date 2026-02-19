@@ -109,10 +109,9 @@
 }
 }
 
-@media(max-width: 600px){
+@media(max-width: 768px){
     .food-carousel {
         padding: 40px 10px 50px 10px ;
-
 }
 
 .section-title {

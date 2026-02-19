@@ -75,4 +75,10 @@ document.addEventListener("DOMContentLoaded", () =>{
       "pages/home/right/right.css",
       "pages/home/right/right.js",
     )
+
+     loadSection("testimonial-container",
+      "pages/home/testimonial/testimonial.html",
+      "pages/home/testimonial/testimonial.css",
+      "pages/home/testimonial/testimonial.js",
+    )
 }) 

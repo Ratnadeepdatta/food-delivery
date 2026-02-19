@@ -1,0 +1,98 @@
+        .right {
+            padding: 0px 20px;
+            background-image: url("../../../assets/images/hero-bg02.webp");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .right-time {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            text-align: left;
+        }
+
+        .right-text {
+            flex: 1;
+        }
+
+        .right-text h2 {
+            font-size: 37px;
+            font-weight: 600;
+            color: var(--white);
+            padding-right: 180px;
+
+        }
+
+        .right-text h2 span {
+            color: var(--btn-bg);
+        }
+
+        .right-text p {
+            color: var(--hero-title);
+            padding: 25px 180px 25px 0px;
+        }
+
+        .order-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .order-content span {
+            font-size: 30px;
+            color: var(--btn-bg);
+        }
+
+        .order-content span i {
+            font-size: 20px;
+            color: var(--white);
+        }
+
+        .right-image {
+            flex: 1;
+        }
+
+        .right-image img {
+            height: auto;
+            margin-top: -40px;
+            margin-bottom: -4px;
+        }
+
+        @media (max-width: 768px) {
+            .right-time {
+                flex-direction: column;
+            padding: 0px;
+                justify-content: center;
+            }
+            .right{
+                padding-bottom: 40px;
+            }
+
+            .right-text {
+                order: 2;
+                padding-right: 0px;
+            }
+
+            .right-text h2 {
+                font-size: 30px;
+                padding-right: 0px;
+            }
+
+            .right-text p {
+                padding: 25px 0px 25px 0px;
+
+            }
+
+            .right-image {
+                order: 1;
+            }
+
+            .right-image img {
+                max-width: 350px;
+                align-items: center;
+                text-align: center;
+            }
+        }

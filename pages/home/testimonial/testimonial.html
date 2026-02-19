@@ -1,0 +1,60 @@
+
+
+<section class="review-section">
+<div class="container testimonial">
+
+    <div class="review-header">
+        <h2>What Our Customers Are Saying</h2>
+        
+        <button onclick="openReviewPopup()" class="hero-btn">
+            Write a Review
+        </button>
+        
+    </div>
+    
+    <div class="review-container" id="reviewContainer"></div>
+</div>
+
+</section>
+
+<!-- review popup code -->
+
+<div class="review-popup" id="reviewPopup">
+
+  <div class="popup-content">
+
+    <div class="popup-header">
+      <h3>Menuzy Restaurant</h3>
+      <!-- <span onclick="closeReviewPopup()">✖</span> -->
+    </div>
+
+    <div class="popup-body">
+
+      <div class="rating-input" id="ratingInput">
+        <i class="fa-regular fa-star" data-value="1"></i>
+        <i class="fa-regular fa-star" data-value="2"></i>
+        <i class="fa-regular fa-star" data-value="3"></i>
+        <i class="fa-regular fa-star" data-value="4"></i>
+        <i class="fa-regular fa-star" data-value="5"></i>
+      </div>
+
+      <textarea id="reviewText"
+        placeholder="Share your experience..."
+      ></textarea>
+
+      <input type="file" id="reviewMedia" multiple>
+
+    </div>
+
+    <div class="popup-footer">
+
+      <button onclick="closeReviewPopup()">Cancel</button>
+
+      <button onclick="postReview()">Post</button>
+
+    </div>
+
+  </div>
+
+</div>
+
