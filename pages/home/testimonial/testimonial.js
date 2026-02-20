@@ -20,8 +20,7 @@ const reviews = JSON.parse(localStorage.getItem("reviews")) || [
 
 function loadReviews() {
 
-  const container =
-    document.getElementById("reviewContainer");
+  const container = document.getElementById("reviewContainer");
 
   container.innerHTML = "";
 
@@ -40,7 +39,7 @@ ${generateStars(review.rating)}
 </div>
 
 <p>
-${review.text.substring(0, 200)}
+${review.text.substring(0, 300)}
 </p>
 
 </div>
@@ -59,15 +58,37 @@ function generateStars(rating) {
 
   let stars = "";
 
-  for (let i = 0; i < rating; i++) {
+  for (let i = 1; i <= 5; i++) {
 
-    stars += `<i class="fa-solid fa-star"></i>`;
+    if (i <= rating) {
+
+      stars += `<i class="fa-solid fa-star star active"></i>`;
+
+    } else {
+
+      stars += `<i class="fa-solid fa-star star normal"></i>`;
+
+    }
 
   }
 
   return stars;
 
 }
+
+// function generateStars(rating) {
+
+//   let stars = "";
+
+//   for (let i = 0; i < rating; i++) {
+
+//     stars += `<i class="fa-solid fa-star"></i>`;
+
+//   }
+
+//   return stars;
+
+// }
 
 // popup function 
 

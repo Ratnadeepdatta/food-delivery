@@ -26,9 +26,11 @@
   }
 
   .review-card{
-    background:#fff;
+    background:var(--white);
     padding:20px;
     border-radius:12px;
+    height: 250px;
+    /* width: 250px; */
   }
 
   .review-card img{
@@ -65,7 +67,17 @@
   height: 100px;
   padding: 8px;
  }
+ 
 
+/* active star */
+.star.active {
+  color: #ffc107 !important;
+}
+
+/* inactive star */
+.star.normal {
+  color: #333 !important;
+}
   .rating-input i{
     font-size:20px;
     cursor:pointer;
