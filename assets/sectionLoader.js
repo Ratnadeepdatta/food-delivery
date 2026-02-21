@@ -47,13 +47,6 @@ document.addEventListener("DOMContentLoaded", () =>{
     "components/footer/footer.css",
     "components/footer/footer.js",
     )
-
-    //  loadSection("hero",
-    // "pages/home/hero/hero.html",
-    // "pages/home/hero/hero.css",
-    // "pages/home/hero/hero.js",
-    // )
-
      loadSection("menu-container",
     "pages/home/menu/menu.html",
     "pages/home/menu/menu.css",
@@ -80,5 +73,11 @@ document.addEventListener("DOMContentLoaded", () =>{
       "pages/home/testimonial/testimonial.html",
       "pages/home/testimonial/testimonial.css",
       "pages/home/testimonial/testimonial.js",
+    )
+
+     loadSection("homeBlogContainer",
+      "pages/home/homeBlogContainer/homeBlogContainer.html",
+      "pages/home/homeBlogContainer/homeBlogContainer.css",
+      "pages/home/homeBlogContainer/homeBlogContainer.js",
     )
 }) 

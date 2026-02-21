@@ -39,7 +39,7 @@ ${generateStars(review.rating)}
 </div>
 
 <p>
-${review.text.substring(0, 300)}
+${review.text.substring(0, 200)}
 </p>
 
 </div>
@@ -49,6 +49,7 @@ ${review.text.substring(0, 300)}
   });
 
 }
+
 
 loadReviews();
 
@@ -75,21 +76,6 @@ function generateStars(rating) {
   return stars;
 
 }
-
-// function generateStars(rating) {
-
-//   let stars = "";
-
-//   for (let i = 0; i < rating; i++) {
-
-//     stars += `<i class="fa-solid fa-star"></i>`;
-
-//   }
-
-//   return stars;
-
-// }
-
 // popup function 
 
 function openReviewPopup() {
