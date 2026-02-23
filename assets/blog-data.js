@@ -1,31 +1,31 @@
 const blogPosts = [
-    {
-        id: 1,
-        title: "Incredible Mac and Cheese",
-        date: "24 Jan 2026",
-        author: "Ratnadeep Datta",
-        category: "Dinner",
-        image: "assets/images/promo01.webp",
-        desctiption: "Creamy, cheesy mac and cheese recipe perfect for dinner lovers.",
-        link: "#",
-    },
-    {
-        id:2,
-        title: "Burrata Salad With Fried",
-        date: "26 Jan 2026",
-        author: "Ratnadeep Datta",
-        category: "Pizza",
-        image: "assets/images/promo02.webp",
-        description: "Fresh burrata salad with crispy fried toppings.",
-        link: "#",
-    },
-     {
+  {
+    id: 1,
+    title: "Incredible Mac and Cheese",
+    date: "24 Jan 2026",
+    author: "Ratnadeep Datta",
+    category: "Dinner",
+    image: "/assets/images/promo01.webp",
+    desctiption: "Creamy, cheesy mac and cheese recipe perfect for dinner lovers.Creamy, cheesy mac and cheese recipe perfect for dinner lovers.Creamy, cheesy mac and cheese recipe perfect for dinner lovers.",
+    link: "#",
+  },
+  {
+    id: 2,
+    title: "Burrata Salad With Fried",
+    date: "26 Jan 2026",
+    author: "Ratnadeep Datta",
+    category: "Pizza",
+    image: "/assets/images/promo02.webp",
+    description: "Fresh burrata salad with crispy fried toppings.",
+    link: "#",
+  },
+  {
     id: 3,
     title: "Chicken Tinga Tacos",
     date: "24 Jan 2026",
     author: "Ratnadeep Datta",
     category: "Dinner",
-    image: "../../assets/images/blog3.jpg",
+    image: "/assets/images/promo03.webp",
     description: "Authentic Mexican chicken tacos with smoky flavor.",
     link: "#"
   },
@@ -35,7 +35,7 @@ const blogPosts = [
     date: "24 Jan 2026",
     author: "Ratnadeep Datta",
     category: "Salad",
-    image: "../../assets/images/blog4.jpg",
+    image: "/assets/images/promo04.webp",
     description: "Healthy quinoa salad with sweet potato mix.",
     link: "#"
   },
@@ -45,7 +45,7 @@ const blogPosts = [
     date: "24 Jan 2026",
     author: "Ratnadeep Datta",
     category: "Dinner",
-    image: "../../assets/images/blog5.jpg",
+    image: "/assets/images/promo05.webp",
     description: "Hot and fresh cheese pizza with extra toppings.",
     link: "#"
   },
@@ -55,8 +55,28 @@ const blogPosts = [
     date: "24 Jan 2026",
     author: "Ratnadeep Datta",
     category: "Pizza",
-    image: "../../assets/images/blog6.jpg",
+    image: "/assets/images/promo04.webp",
+    description: "Restaurant style cheese pizza at home.",
+    link: "#"
+  },
+  {
+    id: 7,
+    title: "Tasty Cheese Pizza",
+    date: "24 Jan 2026",
+    author: "Ratnadeep Datta",
+    category: "Pizza",
+    image: "/assets/images/promo01.webp",
+    description: "Restaurant style cheese pizza at home.",
+    link: "#"
+  },
+  {
+    id: 8,
+    title: "Tasty Cheese Pizza",
+    date: "24 Jan 2026",
+    author: "Ratnadeep Datta",
+    category: "Pizza",
+    image: "/assets/images/promo02.webp",
     description: "Restaurant style cheese pizza at home.",
     link: "#"
   }
-]
+];
