@@ -1,4 +1,5 @@
-// pages/blog/blog.js
+
+// This is for 1st section 
 
 const blogdiv = document.getElementById("blog-commondiv");
 
@@ -13,17 +14,33 @@ blogMainTitle.classList.add("blog-main-title-h2")
 blogdiv.appendChild(blogSubTitle);
 blogdiv.appendChild(blogMainTitle);
 
+// This is for 2nd Right section 
+
+const blogRight = document.getElementById("blogArticle");
+const blogArticleTitle = document.createElement("h2");
+blogArticleTitle.textContent = "Select a Blog to read";
+blogArticleTitle.classList.add("blog-article-h2");
+
+const blogRightP = document.createElement("p");
+blogRightP.textContent = "Click any blog card to see full article here.";
+blogRightP.classList.add("blog-right-p");
+
+
+blogRight.appendChild(blogArticleTitle);
+blogRight.appendChild(blogRightP);
+
+// This is for Grid card
 
 const blogGrid = document.getElementById("blogGrid");
 
 function loadBlogs() {
 
-  let html = "";
+    let html = "";
 
-  blogPosts.forEach(post => {
+    blogPosts.forEach(post => {
 
-    html += `
-    
+        html += `
+
     <div class="blog-card">
 <a href="${post.link}" class="blog-card-link">
       <div class="blog-image">
@@ -53,10 +70,12 @@ function loadBlogs() {
     
     `;
 
-  });
+    });
 
-  blogGrid.innerHTML = html;
+    blogGrid.innerHTML = html;
 
 }
+
+
 
 loadBlogs();
