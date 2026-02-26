@@ -1,0 +1,174 @@
+        .about {
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        .about-image img {
+            height: 450px;
+            width: 450px;
+        }
+
+        .about-alltext {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            flex: 1;
+            gap: 20px;
+        }
+
+        .about-alltext h2 {
+            font-size: 37px;
+            font-weight: 600;
+        }
+
+        .about-alltext span {
+            color: var(--btn-bg);
+        }
+
+        .about-alltext p {
+            font-size: 15px;
+            padding-right: 150px;
+            color: var(--description);
+        }
+
+        .offers {
+            background: url("../../../assets/images/offer-bg.webp");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: absolute;
+            margin-top: -20px;
+            width: 216px;
+            height: 226px;
+            left: 160px;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: scaleanim 1s linear 0s infinite alternate;
+        }
+
+        @keyframes scaleanim {
+            0% {
+                transform: scale(1) translateY(0);
+            }
+
+            100% {
+                transform: scale(1.05) translateY(-8px);
+            }
+        }
+
+        .offer-texts {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            padding: 0px 25px 35px 0px;
+            text-align: left;
+        }
+
+        .offer-texts h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .offer-texts span {
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        .offer-texts h4 {
+            font-size: 20px;
+            color: var(--white);
+        }
+
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            list-style: none;
+            padding-bottom: 10px;
+
+        }
+
+        .feature-list li {
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: var(--black);
+        }
+
+        .feature-list li i {
+            background: var(--btn-bg);
+            border-radius: 50%;
+            height: 20px;
+            width: 20px;
+            font-size: 10px;
+            color: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        @media(max-width: 768px) {
+            .about {
+                flex-direction: column;
+                gap: 40px;
+                padding: 40px 20px;
+            }
+
+            .about-image img {
+                height: 300px;
+                width: 300px;
+            }
+
+            .offers {
+                width: 156px;
+                height: 166px;
+                left: 30px;
+            }
+
+            .offer-texts h3 {
+                font-size: 16px;
+            }
+
+            .offer-texts span {
+                font-size: 25px;
+            }
+
+            .offer-texts h4 {
+                font-size: 16px;
+            }
+
+            .offer-texts {
+                gap: 7px;
+            }
+
+            .about-alltext {
+                gap: 15px;
+            }
+
+            .about-alltext h2 {
+                font-size: 30px;
+            }
+
+            .about-alltext p {
+                font-size: 15px;
+                padding-right: 0;
+                ;
+            }
+        }
