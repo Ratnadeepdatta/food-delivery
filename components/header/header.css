@@ -99,6 +99,8 @@ nav .mbtn{
   padding: 8px 16px;
   border-radius: 18px;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 .mbtn:hover {
   transform: translateY(-4px);
@@ -235,6 +237,7 @@ nav ul li a {
 }
 
 nav .mbtn{
-  display: block;
+  display: flex;
+  align-items: center;
 }
 }
