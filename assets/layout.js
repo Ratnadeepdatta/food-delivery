@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     base + "components/footer/footer.css",
     base + "components/footer/footer.js"
   );
-
+  
 });
 
 

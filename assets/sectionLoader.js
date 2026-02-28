@@ -75,9 +75,16 @@ document.addEventListener("DOMContentLoaded", () =>{
       "pages/home/testimonial/testimonial.js",
     )
 
-     loadSection("homeBlogContainer",
-      "pages/home/homeBlogContainer/homeBlogContainer.html",
-      "pages/home/homeBlogContainer/homeBlogContainer.css",
-      "pages/home/homeBlogContainer/homeBlogContainer.js",
-    )
+loadSection(
+  "homeBlogSection",
+  "/pages/home/blog/h-blog.html",
+  "/pages/home/blog/h-blog.css",
+  "/pages/home/blog/h-blog.js"
+);
+
+    //  loadSection("homeBlogContainer",
+    //   "pages/home/homeBlogContainer/homeBlogContainer.html",
+    //   "pages/home/homeBlogContainer/homeBlogContainer.css",
+    //   "pages/home/homeBlogContainer/homeBlogContainer.js",
+    // )
 }) 
