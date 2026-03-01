@@ -82,6 +82,13 @@ loadSection(
   "/pages/home/blog/h-blog.js"
 );
 
+loadSection(
+  "h-contact",
+  "/pages/home/contact/contact.html",
+  "/pages/home/contact/contact.css",
+  "/pages/home/contact/contact.js"
+);
+
     //  loadSection("homeBlogContainer",
     //   "pages/home/homeBlogContainer/homeBlogContainer.html",
     //   "pages/home/homeBlogContainer/homeBlogContainer.css",
