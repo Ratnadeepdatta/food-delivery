@@ -1,8 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
+const container = document.getElementById("homeBlogContainer");
 
-  const container = document.getElementById("homeBlogContainer");
-
-  if (!container) return;
+if (container && typeof blogPosts !== "undefined") {
 
   const latestPosts = blogPosts
     .sort((a, b) => new Date(b.date) - new Date(a.date))
@@ -36,4 +34,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 
-});
+}
