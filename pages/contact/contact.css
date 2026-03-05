@@ -1,9 +1,32 @@
-.contact-container {
+.contact-div{
+  padding: 100px 20px 20px ;
+  background-image: url("../../../assets/images/hero-bg02.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-subtitle-h1{
+  font-size: 18px;
+  color: var(--btn-bg);
+  margin-bottom: 10px;
+}
+
+.contact-maintitle{
+  font-size: 41px;
+  color: var(--hero-title);
+}
+
+/* .contact-container {
   width: 100%;
 }
 
 
-/* MAP */
 .map-section iframe {
   width: 100%;
   height: 400px;
@@ -11,27 +34,27 @@
 }
 
 
-/* CONTACT SECTION */
+
 .contact-section {
   display: flex;
   gap: 40px;
   padding: 40px;
-}
+} */
 
 
 /* LEFT IMAGE */
-.contact-left {
+/* .contact-left {
   flex: 1;
 }
 
 .contact-left img {
   width: 100%;
   border-radius: 10px;
-}
+} */
 
 
 /* RIGHT FORM */
-.contact-right {
+/* .contact-right {
   flex: 1;
 }
 
@@ -58,11 +81,11 @@
   color: white;
   border: none;
   cursor: pointer;
-}
+} */
 
 
-/* MOBILE RESPONSIVE */
-@media (max-width:768px) {
+
+/* @media (max-width:768px) {
 
 .contact-section {
   flex-direction: column;
@@ -72,4 +95,4 @@
   height: 300px;
 }
 
-}
+} */
