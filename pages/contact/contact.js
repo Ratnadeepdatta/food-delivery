@@ -13,6 +13,24 @@ contactTitle.classList.add("contact-maintitle");
 contactHero.appendChild(contactSubTitle);
 contactHero.appendChild(contactTitle);
 
-// map-section
+// 2nd section 
 
-const mapSection = document.getElementById("map-section")
+const cntSection = document.getElementById("cnt-2nd-section");
+
+const imgDiv = document.createElement(div)
+imgDiv.classList.add("cnt-img-div")
+
+const img = document.createElement("img")
+img.src = "assets/images/contact-img01.webp"
+
+imgDiv.appendChild(img);
+
+
+
+
+
+
+
+
+
+
