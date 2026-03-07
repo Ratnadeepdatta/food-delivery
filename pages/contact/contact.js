@@ -26,7 +26,42 @@ img.src = "assets/images/contact-img01.webp"
 imgDiv.appendChild(img);
 
 
+const contentDiv = document.createElement("cnt-2nd-section");
+contentDiv.classList.add("ctn-content");
 
+const title = document.createElement("h1");
+title.innerHTML = `
+A Moments Of Delivered <br>
+On <span>Right Time</span> & Place
+`;
+
+const desc = document.createElement("p");
+desc.textContent =
+"Experience reliable and timely food delivery with quality service, ensuring every order reaches you fresh, delicious, and right on schedule.";
+
+const btnWrapper = document.createElement("div");
+btnWrapper.classList.add("ctn-btn");
+
+const orderBtn = document.createElement("a");
+orderBtn.classList.add("order-btn");
+orderBtn.href="#";
+orderBtn.textContent="Order Now";
+
+const phone = document.createElement("div");
+phone.classList.add("phone");
+phone.textContent="📞 0123456789";
+
+btnWrapper.appendChild(orderBtn);
+btnWrapper.appendChild(phone);
+
+contentDiv.appendChild(title);
+contentDiv.appendChild(desc);
+contentDiv.appendChild(btnWrapper);
+
+container.appendChild(imageDiv);
+container.appendChild(contentDiv);
+
+heroSection.appendChild(container);
 
 
 
