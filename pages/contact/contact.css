@@ -6,7 +6,6 @@
   background-repeat: no-repeat;
   height: 45vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   text-align: center;
 }
@@ -22,38 +21,14 @@
   color: var(--hero-title);
 }
 /* 2nd section */
-
-/* .cnt-2nd-section{
-  display: flex;
-  justify-content: space-between;
-  gap: 60px;
-
-  
-}
-.cnt-2nd-content{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 30px;
-  text-align: left;
- 
-} */
-
-
-/*  cpt css code */
-
-/* section container */
 .cnt-2nd-section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 50px;
     max-width: 1200px;
-    margin: auto;
-    padding: 60px 20px;
 }
 
-/* image div */
 .cnt-img-div{
     flex: 1;
 }
@@ -61,16 +36,14 @@
 .cnt-img-div img{
     width: 100%;
     height: auto;
-    border-radius: 10px;
     display: block;
+    margin-top: -50px;
 }
 
-/* content area */
 .cnt-2nd-content{
     flex: 1;
 }
 
-/* title */
 .cnt-2nd-content h2{
     font-size: 36px;
     font-weight: 700;
@@ -79,41 +52,37 @@
 }
 
 .cnt-2nd-content span{
-    color: #ff5a00;
+    color: var(--btn-bg);
 }
 
-/* description */
 .cnt-2nd-content p{
     font-size: 16px;
-    color: #555;
+    color: var(--description);
     margin-bottom: 30px;
     line-height: 1.6;
 }
 
-/* button wrapper */
 .cnt-section-btn{
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-/* order button */
 .order-btn{
     display: inline-block;
-    padding: 12px 28px;
-    background: #ff5a00;
-    color: #fff;
+    padding: 12px 30px;
+    background: var(--btn-bg);
+    color: var(--white);
     text-decoration: none;
     font-weight: 600;
-    border-radius: 6px;
-    transition: 0.3s;
+    border-radius: 18px;
 }
 
 .order-btn:hover{
-    background: #e04d00;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4);;
 }
 
-/* phone section */
 .phone-div{
     display: flex;
     align-items: center;
@@ -121,17 +90,16 @@
 }
 
 .phone-cont{
-    font-size: 18px;
+    font-size: 30px;
     font-weight: 600;
-    color: #222;
+    color: var(--btn-bg);
 }
 
 .ctn-phone-icon{
-    width: 22px;
-    height: 22px;
+    width: 30px;
+    height: 30px;
 }
 
-/* responsive */
 @media (max-width: 768px){
 
     .cnt-2nd-section{
@@ -143,4 +111,72 @@
         justify-content: center;
         flex-wrap: wrap;
     }
+}
+
+
+
+.contact-section{
+display:flex;
+gap:40px;
+padding:60px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.contact-form-area{
+flex:1;
+}
+
+.contact-form-area h2{
+margin-bottom:20px;
+}
+
+.contact-form-area input,
+.contact-form-area textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:14px;
+}
+
+.contact-form-area textarea{
+height:120px;
+resize:none;
+}
+
+.submit-btn{
+background:#ff6b00;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-size:16px;
+}
+
+.map-area{
+flex:1;
+}
+
+.map-area iframe{
+width:100%;
+height:100%;
+min-height:350px;
+border:0;
+}
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+.contact-section{
+flex-direction:column;
+}
+
+.map-area iframe{
+height:300px;
+}
+
 }
