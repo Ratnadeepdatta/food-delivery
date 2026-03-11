@@ -1,4 +1,3 @@
-
 const header = document.getElementById("header");
 let ticking = false;
 

@@ -1,3 +1,8 @@
+(function(){
+emailjs.init("UPW7Zf5j4uyzbq7mk");
+})();
+
+
 // hero section
 
 const contactHero = document.getElementById("contact-hero-section");
@@ -89,7 +94,7 @@ style.textContent = `
 
         .contact-form{
         width:30%
-            display: flex;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 20px;
@@ -125,7 +130,7 @@ style.textContent = `
         }
 
         .submit-btn{
-        background:#ff6a00;
+        background:var(--btn-bg);
         color:white;
         padding:12px 30px;
         border:none;
@@ -134,8 +139,13 @@ style.textContent = `
         font-size:16px;
         display:block;
         margin-left:0;
+        transition: 0.3s;
         }
-
+         
+        .submit-btn:hover{
+         transform: translateY(-4px);
+         box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4);
+        }
         .map-area{
         width: 100%;
         }
@@ -222,27 +232,45 @@ mapDiv.appendChild(map);
 
 thirdSection.appendChild(formDiv);
 thirdSection.appendChild(mapDiv);
-
-
+ 
+//  for form email code..............
 form.addEventListener("submit", function(e){
 
 e.preventDefault();
 
-const name = nameInput.value;
-const phone = phoneInput.value;
-const email = emailInput.value;
-const msg = message.value;
+/* mandatory fields */
 
-const whatsappMessage =
-`Name: ${name}
-Phone: ${phone}
-Email: ${email}
-Message: ${msg}`;
+if(nameInput.value === "" || 
+    phoneInput.value === "" || 
+    emailInput.value === "" || 
+    message.value === ""){
+alert("Please fill out the required fields.");
+return;
+}
 
-const encodedMessage = encodeURIComponent(whatsappMessage);
+/* collect form data */
 
-const whatsappURL = `https://wa.me/918974287067?text=${encodedMessage}`;
+const params = {
+name: nameInput.value,
+phone: phoneInput.value,
+email: emailInput.value,
+message: message.value
+};
 
-window.open(whatsappURL, "_blank");
+/* send email */
+
+emailjs.send("service_dvr13am","template_gz83jp2",params)
+
+.then(function(){
+
+alert("Message sent successfully!");
+
+form.reset();
+
+}, function(error){
+
+alert("Failed to send message");
+
+});
 
 });
