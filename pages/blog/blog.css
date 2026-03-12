@@ -5,7 +5,7 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 80vh;
+        height: 50vh;
     }
     .blog-commondiv{
         display: flex;
@@ -60,6 +60,7 @@
         width: 100%;
         height:auto;
         object-fit: cover; 
+        align-items: center;
     }
 
     .category {

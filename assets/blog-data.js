@@ -16,7 +16,7 @@ const blogPosts = [
     author: "Ratnadeep Datta",
     category: "Pizza",
     image: "/assets/images/promo02.webp",
-    description: "Fresh burrata salad with crispy fried toppings.",
+    description: "Fresh burrata salad with crispy fried toppings. Discover delicious recipes, cooking tips, and kitchen secrets to make your meals more exciting. From quick dishes to special treats, explore ideas that inspire you to cook better and enjoy flavorful food every day.",
     link: "#",
   },
   {
@@ -66,7 +66,7 @@ const blogPosts = [
     author: "Ratnadeep Datta",
     category: "Pizza",
     image: "/assets/images/promo01.webp",
-    description: "Restaurant style cheese pizza at home.",
+    description: "Restaurant style cheese pizza at home. Discover delicious recipes, cooking tips, and kitchen secrets to make your meals more exciting. From quick dishes to special treats, explore ideas that inspire you to cook better and enjoy flavorful food every day.",
     link: "#"
   },
   {
@@ -76,7 +76,7 @@ const blogPosts = [
     author: "Ratnadeep Datta",
     category: "Pizza",
     image: "/assets/images/promo02.webp",
-    description: "Restaurant style cheese pizza at home.",
+    description: "Restaurant style cheese pizza at home. Discover delicious recipes, cooking tips, and kitchen secrets to make your meals more exciting. From quick dishes to special treats, explore ideas that inspire you to cook better and enjoy flavorful food every day.",
     link: "#"
   }
 ];

@@ -58,6 +58,7 @@ function loadBlogs() {
         <h3>${post.title}</h3>
 
         <p>${post.description}</p>
+        
 
         <a href="${post.link}" class="read-more">
         <span class="read-more">
@@ -75,7 +76,5 @@ function loadBlogs() {
     blogGrid.innerHTML = html;
 
 }
-
-
 
 loadBlogs();
