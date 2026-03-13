@@ -1,22 +1,43 @@
 
 
 
+// Function to show only 10 words
+
+function getShortText(text, wordLimit = 10) {
+
+  if (!text) return "";
+
+  const words = text.split(" ");
+
+  if (words.length > wordLimit) {
+    return words.slice(0, wordLimit).join(" ") + "...";
+  }
+
+  return text;
+
+}
+
+// Get containers
+
 const homeBlogSection = document.getElementById("home-blog-section");
 const container = document.getElementById("homeBlogContainer");
 
-// 1️ Create Title
+
+// Create section title
+
 const homeBlogTitle = document.createElement("h2");
-homeBlogTitle.textContent = "Discover New Recipes & Cooking Secrets";
+homeBlogTitle.innerHTML = 'Discover <span class="highlight-text">New Recipes </span> & Cooking Secrets';
 homeBlogTitle.classList.add("title-home-bsection");
 
-// place title before grid
 homeBlogSection.insertBefore(homeBlogTitle, container);
 
 
+// Make sure blogPosts exists
+
 if (container && typeof blogPosts !== "undefined") {
 
-  const latestPosts = blogPosts
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
+  const latestPosts = [...blogPosts]
+    .sort((a, b) => b.id - a.id)
     .slice(0, 4);
 
   let html = "";
@@ -31,12 +52,17 @@ if (container && typeof blogPosts !== "undefined") {
         </div>
 
         <div class="blog-content">
-          <h3>${post.title}</h3>
-          <p>${post.description}</p>
 
-          <a href="${post.link}" class="read-more">
+          <h3>${post.title}</h3>
+
+          <p class="blog-desc">
+            <span class="short-text">${getShortText(post.description, 10)}</span>
+            <span class="full-text">${post.description}</span>
+          </p>
+
+          <button class="read-more-btn">
             Read More →
-          </a>
+          </button>
 
         </div>
 
@@ -45,15 +71,41 @@ if (container && typeof blogPosts !== "undefined") {
 
   });
 
-  // 2️ Insert Blog Cards
+  // Insert cards
   container.innerHTML = html;
 
-  // 3️ Create Read More Button
-  const moreBtn = document.createElement("a");
-  moreBtn.textContent = "Read More";
-  moreBtn.href = "/pages/blog/blog.html";
-  moreBtn.classList.add("blog-more-btn");
 
-  // place button AFTER grid
-  homeBlogSection.appendChild(moreBtn);
+// Create View More button
+const viewMoreBtn = document.createElement("a");
+
+viewMoreBtn.textContent = "View More Articles";
+viewMoreBtn.href = "/pages/blog/blog.html";
+viewMoreBtn.classList.add("view-more-btn");
+
+homeBlogSection.appendChild(viewMoreBtn);
+
+
+  // Accordion toggle
+
+  const readBtns = document.querySelectorAll(".read-more-btn");
+
+  readBtns.forEach(btn => {
+
+    btn.addEventListener("click", function(){
+
+      const desc = this.previousElementSibling;
+
+      desc.classList.toggle("active");
+
+      if(desc.classList.contains("active")){
+        this.textContent = "Read Less ↑";
+      }else{
+        this.textContent = "Read More →";
+      }
+
+    });
+
+  });
+
 }
+

@@ -6,7 +6,7 @@ const blogPosts = [
     author: "Ratnadeep Datta",
     category: "Dinner",
     image: "/assets/images/promo01.webp",
-    desctiption: "Creamy, cheesy mac and cheese recipe perfect for dinner lovers.Creamy, cheesy mac and cheese recipe perfect for dinner lovers.Creamy, cheesy mac and cheese recipe perfect for dinner lovers.",
+    description: "Creamy, cheesy mac and cheese recipe perfect for dinner lovers.Creamy, cheesy mac and cheese recipe perfect for dinner lovers.Creamy, cheesy mac and cheese recipe perfect for dinner lovers.",
     link: "#",
   },
   {
