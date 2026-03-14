@@ -37,11 +37,7 @@ window.loadSection = function (containerId, htmlPath, cssPath, jsPath) {
 
 document.addEventListener("DOMContentLoaded", () =>{
 
-    loadSection("header-container",
-    "components/header/header.html",
-    "components/header/header.css",
-    "components/header/header.js",
-    ) 
+
     loadSection("footer",
     "components/footer/footer.html",
     "components/footer/footer.css",
