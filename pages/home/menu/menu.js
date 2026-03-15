@@ -61,3 +61,105 @@ wrapper.addEventListener("mouseenter", () => clearInterval(autoPlay));
 wrapper.addEventListener("mouseleave", () => {
     autoPlay = setInterval(goNext, 3000);
 });
+
+//  Below this code for menu busket and popup
+
+let cart = [];
+
+function initMenuCart(){
+
+const addButtons = document.querySelectorAll(".add-cart");
+const cartCount = document.getElementById("cart-count");
+const cartItems = document.getElementById("cart-items");
+const cartTotal = document.getElementById("cart-total");
+
+addButtons.forEach(button => {
+
+button.addEventListener("click", () => {
+
+const card = button.closest(".food-card");
+
+const name = card.dataset.name;
+const price = parseFloat(card.dataset.price);
+const img = card.dataset.img;
+
+const existing = cart.find(item => item.name === name);
+
+if(existing){
+existing.qty++;
+} else {
+
+cart.push({
+name,
+price,
+img,
+qty:1
+});
+
+}
+
+updateCart(cartCount, cartItems, cartTotal);
+
+});
+
+});
+
+}
+
+
+function updateCart(cartCount, cartItems, cartTotal){
+
+cartItems.innerHTML = "";
+
+let total = 0;
+let count = 0;
+
+cart.forEach((item,index)=>{
+
+total += item.price * item.qty;
+count += item.qty;
+
+cartItems.innerHTML += `
+<div class="cart-item">
+
+<img src="${item.img}" width="40">
+
+<div>
+<p>${item.name}</p>
+<p>$${item.price}</p>
+</div>
+
+<div>
+<button onclick="changeQty(${index},-1)">-</button>
+${item.qty}
+<button onclick="changeQty(${index},1)">+</button>
+</div>
+
+</div>
+`;
+
+});
+
+cartCount.innerText = count;
+cartTotal.innerText = total.toFixed(2);
+
+}
+
+
+function changeQty(index,change){
+
+cart[index].qty += change;
+
+if(cart[index].qty <= 0){
+cart.splice(index,1);
+}
+
+const cartCount = document.getElementById("cart-count");
+const cartItems = document.getElementById("cart-items");
+const cartTotal = document.getElementById("cart-total");
+
+updateCart(cartCount, cartItems, cartTotal);
+
+}
+
+initMenuCart();

@@ -1,0 +1,17 @@
+.cart-popup{
+position: fixed;
+right:-400px;
+top:0;
+width:350px;
+height:100%;
+background:#fff;
+box-shadow:-5px 0 10px rgba(0,0,0,0.2);
+padding:20px;
+transition:0.3s;
+overflow-y:auto;
+z-index:999;
+}
+
+.cart-popup.open{
+right:0;
+}

@@ -63,7 +63,7 @@
     z-index: 991;
     transition: color 0.4s ease;
     overflow: hidden;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .food-card h3 {
