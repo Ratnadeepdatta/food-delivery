@@ -10,6 +10,7 @@
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="assets/global.css">
         <link rel="stylesheet" href="pages/home/hero/hero.css">
+        <link rel="stylesheet" href="/components/popup/popup.css">
     </head>
 
     <body> 
@@ -45,8 +46,18 @@
         <div id="h-contact"></div>  
         <div id="footer"></div>
 
+
         <div id="popup-container"></div>
-        <script src="/components/popup/popup.js"></script>
+
+<script>
+fetch("/components/popup/popup.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("popup-container").innerHTML = data;
+});
+</script>
+
+<script src="/components/popup/popup.js"></script>
 
 
     <script src="assets/sectionLoader.js" defer></script>
