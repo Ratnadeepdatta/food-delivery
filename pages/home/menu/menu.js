@@ -124,12 +124,12 @@ cartItems.innerHTML += `
 
 <img src="${item.img}" width="40">
 
-<div>
+<div class= "popup-pric">
 <p>${item.name}</p>
 <p>$${item.price}</p>
 </div>
 
-<div>
+<div class= "popup-btn">
 <button onclick="changeQty(${index},-1)">-</button>
 ${item.qty}
 <button onclick="changeQty(${index},1)">+</button>

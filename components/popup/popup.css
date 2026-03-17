@@ -4,7 +4,7 @@ top: 0;
 right: -100%;
 width: 380px;
 height: 100vh;
-background: #7e6060;
+background: wheat;
 box-shadow: -5px 0 10px rgba(0,0,0,0.2);
 padding: 20px 0px;
 transition: right 0.3s ease;
@@ -18,28 +18,67 @@ overflow-y: auto;
 }
 
 .cart-item{
-    background: wheat;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 8px;
     margin-bottom: 30px;
     gap: 30px;
-}
+}  
+.cart-item:hover{
+    background: var(--white);
+} 
 .cart-item img{
     width: 85px;
 }
 .cart-item p{
     font-size: 17px;
 }
-.cart-item button{
-    background: var(--black);
-    color: var(--white);
-    font-size: 20px;
+.popup-btn{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.cart-item button {
+  width: 20px;
+  height: 20px;
+  background: var(--black);
+  color: var(--white);
+  font-size: 19px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+   
+.cart-total{
+    background: var(--btn-bg);
     padding: 10px;
-    border-radius: 100%;
-    margin: 0;
+    margin-top: 50px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.popup-pric{
+    width: 130px;
+    height: auto;
+}
+.popup-close{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#close-cart{
+    padding: 12px 30px;
+    border-radius: 18px;
     border: none;
+    font-size: 18px;
+    background: var(--btn-bg);
+  
 }
 .cart-popup.open{
 right: 0;
