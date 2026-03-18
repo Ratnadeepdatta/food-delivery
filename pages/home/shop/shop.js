@@ -59,6 +59,7 @@ swrapper.addEventListener("mouseleave", () => {
     sAutoPlay = setInterval(goRight, 3000);
 });
 
+// new reating code
 
 const ratingContainers = document.querySelectorAll(".star-rating");
 
@@ -72,14 +73,21 @@ ratingContainers.forEach(container => {
 
       const value = star.getAttribute("data-value");
 
-      stars.forEach(s => s.classList.remove("active"));
+      // Reset all stars
+      stars.forEach(s => {
+        s.classList.remove("active");
+        s.classList.remove("fa-solid");
+        s.classList.add("fa-regular");
+      });
 
+      // Fill selected stars
       for (let i = 0; i < value; i++) {
         stars[i].classList.add("active");
+        stars[i].classList.remove("fa-regular");
+        stars[i].classList.add("fa-solid");
       }
 
       const foodId = container.getAttribute("data-food");
-
       localStorage.setItem(foodId, value);
 
     });
@@ -87,3 +95,47 @@ ratingContainers.forEach(container => {
   });
 
 });
+
+const savedRating = localStorage.getItem(container.getAttribute("data-food"));
+
+if (savedRating) {
+  for (let i = 0; i < savedRating; i++) {
+    stars[i].classList.add("active");
+    stars[i].classList.remove("fa-regular");
+    stars[i].classList.add("fa-solid");
+  }
+}
+
+
+// old reating code
+
+// const ratingContainers = document.querySelectorAll(".star-rating");
+
+// ratingContainers.forEach(container => {
+
+//   const stars = container.querySelectorAll("i");
+
+//   stars.forEach(star => {
+
+//     star.addEventListener("click", () => {
+
+//       const value = star.getAttribute("data-value");
+
+//       stars.forEach(s => s.classList.remove("active"));
+
+//       for (let i = 0; i < value; i++) {
+//         stars[i].classList.add("active");
+//       }
+
+//       const foodId = container.getAttribute("data-food");
+
+//       localStorage.setItem(foodId, value);
+
+//     });
+
+//   });
+
+// });
+
+
+

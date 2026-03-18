@@ -48,7 +48,6 @@ overflow-y: auto;
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,20 +55,17 @@ overflow-y: auto;
    
 .cart-total{
     background: var(--btn-bg);
-    padding: 10px;
-    margin-top: 50px;
+    padding: 17px;
+    margin-top: 80px;
     font-size: 22px;
     text-align: center;
 }
 
-.popup-pric{
-    width: 130px;
-    height: auto;
-}
 .popup-close{
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    gap: 20px;
 }
 
 #close-cart{
@@ -78,8 +74,13 @@ overflow-y: auto;
     border: none;
     font-size: 18px;
     background: var(--btn-bg);
+    cursor: pointer;
   
 }
 .cart-popup.open{
 right: 0;
+}
+
+.cart-total .fa-indian-rupee-sign{
+    font-size: 19px;
 }

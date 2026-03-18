@@ -53,11 +53,8 @@ function goPrev() {
 
 // Autoplay
 let autoPlay = setInterval(goNext, 3000);
-
 const wrapper = document.querySelector(".carousel-wrapper");
-
 wrapper.addEventListener("mouseenter", () => clearInterval(autoPlay));
-
 wrapper.addEventListener("mouseleave", () => {
     autoPlay = setInterval(goNext, 3000);
 });
@@ -77,7 +74,7 @@ addButtons.forEach(button => {
 
 button.addEventListener("click", () => {
 
-const card = button.closest(".food-card");
+const card = button.closest(".food-card, .shop-card");
 
 const name = card.dataset.name;
 const price = parseFloat(card.dataset.price);
@@ -126,7 +123,7 @@ cartItems.innerHTML += `
 
 <div class= "popup-pric">
 <p>${item.name}</p>
-<p>$${item.price}</p>
+<p class="popup-items-price"> <i class="fa-solid fa-indian-rupee-sign"></i> ${item.price}</p>
 </div>
 
 <div class= "popup-btn">
