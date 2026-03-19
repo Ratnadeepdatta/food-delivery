@@ -26,7 +26,7 @@ const container = document.getElementById("homeBlogContainer");
 // Create section title
 
 const homeBlogTitle = document.createElement("h2");
-homeBlogTitle.innerHTML = 'Discover <span class="highlight-text">New Recipes </span> & Cooking Secrets';
+homeBlogTitle.innerHTML = 'Discover <span class="highlight-text">New Recipes </span>';
 homeBlogTitle.classList.add("title-home-bsection");
 
 homeBlogSection.insertBefore(homeBlogTitle, container);

@@ -3,20 +3,28 @@
     padding: 50px 20px 60px 20px;
 }
 
-.section-title h2{
+.home-menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.home-menu-container button{
+    align-self: center;
+}
+.section-title h2 {
     font-size: 37px;
     font-weight: 600;
     text-align: center;
 }
 
-.manu-container {
-    align-items: center;
-}
-
 .carousel-wrapper {
     position: relative;
-    overflow: hidden;
-    margin-top: 50px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1400px;
 }
 
 .carousel-btn {
@@ -51,19 +59,27 @@
 .food-card {
     flex: 0 0 calc((100% - 60px) / 4);
     max-width: calc((100% - 60px) / 4);
-    padding: 30px 30px;
+    padding: 30px;
     background: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     border-radius: 10px;
     box-shadow: 0 0.2rem 2.8rem rgb(36 36 36 / 5%);
     position: relative;
     z-index: 991;
     transition: color 0.4s ease;
     overflow: hidden;
+}
+
+.food-card-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
 }
 
 .add-cart {
@@ -99,7 +115,6 @@
 
 .food-card img {
     width: 100%;
-    /* margin-top: 20px; */
 }
 
 .popup-pric {
@@ -116,16 +131,16 @@
         flex: 0 0 calc((100% - 20px) / 2);
         max-width: calc((100% - 20px) / 2);
     }
-}
+};
 
 @media(max-width: 768px) {
     .food-carousel {
-        padding: 40px 10px 50px 10px;
+        padding: 30px 0px;
     }
 
-    .section-title {
+    .section-title h2 {
         font-size: 21px;
-        margin-bottom: 30px;
+        /* margin-bottom: 30px; */
     }
 
     .food-card h3 {
@@ -133,7 +148,8 @@
     }
 
     .food-card {
-        padding: 30px 15px;
+        padding: 0px;
+        /* text-align: center; */
     }
 
     .carousel-btn {
