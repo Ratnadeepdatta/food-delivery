@@ -33,7 +33,7 @@ blogRight.appendChild(blogRightP);
 
 const blogGrid = document.getElementById("blogGrid");
 
-// Function show only 10 words
+// Function showing only 10 words
 
 function getShortText(text, wordLimit = 10) {
 
@@ -104,7 +104,7 @@ function loadBlogs() {
       
       <h2 class="blog-article-h2">${selectedPost.title}</h2>
 
-      <img src="${selectedPost.image}" style="width:100%; margin:15px 0;">
+      <img src="${selectedPost.image}" style="width:50%; margin:20px 0;">
 
       <div class="blog-meta">
         <span>${selectedPost.date}</span>

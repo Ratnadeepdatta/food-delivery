@@ -1,7 +1,7 @@
 
         .h-blog {
             background-color: var(--bg-gray);
-            padding: 50px 30px;
+            padding: 40px 30px;
         }
 
         .title-home-bsection {
@@ -111,6 +111,10 @@
         grid-template-columns: repeat(1, 1fr);
         
     }
+    .title-home-bsection {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
         }
 
-/* document.head.appendChild(style); */
+
