@@ -1,5 +1,5 @@
-(function(){
-emailjs.init("UPW7Zf5j4uyzbq7mk");
+(function () {
+    emailjs.init("UPW7Zf5j4uyzbq7mk");
 })();
 
 
@@ -82,7 +82,115 @@ const thirdSection = document.getElementById("third-main-div");
 const style = document.createElement("style");
 
 style.textContent = `
-         #third-section{
+
+.contact-div{
+  padding: 100px 20px 20px ;
+  background-image: url("../../../assets/images/hero-bg02.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-subtitle-h1{
+  font-size: 18px;
+  color: var(--btn-bg);
+  margin-bottom: 10px;
+}
+
+.contact-maintitle{
+  font-size: 41px;
+  color: var(--hero-title);
+}
+/* 2nd section */
+.contact2nddiv{
+
+    background:var(--white);
+}
+.cnt-2nd-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1200px;
+}
+
+.cnt-img-div{
+    flex: 1;
+}
+
+.cnt-img-div img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: -50px;
+}
+
+.cnt-2nd-content{
+    flex: 1;
+}
+
+.cnt-2nd-content h2{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.cnt-2nd-content span{
+    color: var(--btn-bg);
+}
+
+.cnt-2nd-content p{
+    font-size: 16px;
+    color: var(--description);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.cnt-section-btn{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.order-btn{
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--btn-bg);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.order-btn:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4);
+}
+
+.phone-div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.phone-cont{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--btn-bg);
+}
+
+.ctn-phone-icon{
+    width: 30px;
+    height: 30px;
+}
+
+ #third-section{
         background:#f6f6f6;
         }
 
@@ -158,22 +266,29 @@ style.textContent = `
 
         }
 
-        /* RESPONSIVE */
 
-        @media(max-width:768px){
+@media (max-width: 768px){
 
-        #third-main-div{
-        padding:60px 20px;
-        align-items:center;
-        display:flex;
-        gap:20px;
+    .cnt-2nd-section{
+        flex-direction: column;
+        text-align: center;
+    }
+.cnt-2nd-content h2{
+    font-size: 30px;
+}
+
+    .cnt-section-btn{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+         #third-main-div{
+        flex-direction: column;
         }
 
         .map-area iframe{
         height:300px;
         }
-
-        }
+}
         `;
 
 document.head.appendChild(style);
@@ -232,45 +347,45 @@ mapDiv.appendChild(map);
 
 thirdSection.appendChild(formDiv);
 thirdSection.appendChild(mapDiv);
- 
+
 //  for form email code..............
-form.addEventListener("submit", function(e){
+form.addEventListener("submit", function (e) {
 
-e.preventDefault();
+    e.preventDefault();
 
-/* mandatory fields */
+    /* mandatory fields */
 
-if(nameInput.value === "" || 
-    phoneInput.value === "" || 
-    emailInput.value === "" || 
-    message.value === ""){
-alert("Please fill out the required fields.");
-return;
-}
+    if (nameInput.value === "" ||
+        phoneInput.value === "" ||
+        emailInput.value === "" ||
+        message.value === "") {
+        alert("Please fill out the required fields.");
+        return;
+    }
 
-/* collect form data */
+    /* collect form data */
 
-const params = {
-name: nameInput.value,
-phone: phoneInput.value,
-email: emailInput.value,
-message: message.value
-};
+    const params = {
+        name: nameInput.value,
+        phone: phoneInput.value,
+        email: emailInput.value,
+        message: message.value
+    };
 
-/* send email */
+    /* send email */
 
-emailjs.send("service_dvr13am","template_gz83jp2",params)
+    emailjs.send("service_dvr13am", "template_gz83jp2", params)
 
-.then(function(){
+        .then(function () {
 
-alert("Message sent successfully!");
+            alert("Message sent successfully!");
 
-form.reset();
+            form.reset();
 
-}, function(error){
+        }, function (error) {
 
-alert("Failed to send message");
+            alert("Failed to send message");
 
-});
+        });
 
 });

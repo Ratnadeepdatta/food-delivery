@@ -78,5 +78,16 @@ const blogPosts = [
     image: "/assets/images/promo02.webp",
     description: "Restaurant style cheese pizza at home. Discover delicious recipes, cooking tips, and kitchen secrets to make your meals more exciting. From quick dishes to special treats, explore ideas that inspire you to cook better and enjoy flavorful food every day.",
     link: "#"
+  },
+
+  {
+    id: 8,
+    title: "Tasty Cheese Pizza",
+    date: "24 Jan 2026",
+    author: "Ratnadeep Datta",
+    category: "Sanveg",
+    image: "/assets/images/promo02.webp",
+    description: "Restaurant style cheese pizza at home. Discover delicious recipes, cooking tips, and kitchen secrets to make your meals more exciting. From quick dishes to special treats, explore ideas that inspire you to cook better and enjoy flavorful food every day.",
+    link: "#"
   }
 ];

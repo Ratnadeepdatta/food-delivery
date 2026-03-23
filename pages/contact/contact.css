@@ -1,4 +1,4 @@
-.contact-div{
+/* .contact-div{
   padding: 100px 20px 20px ;
   background-image: url("../../../assets/images/hero-bg02.webp");
   background-position: center;
@@ -20,7 +20,8 @@
   font-size: 41px;
   color: var(--hero-title);
 }
-/* 2nd section */
+2nd section
+
 .contact2nddiv{
 
     background:var(--white);
@@ -111,9 +112,16 @@
         flex-direction: column;
         text-align: center;
     }
+.cnt-2nd-content h2{
+    font-size: 30px;
+}
 
     .cnt-section-btn{
         justify-content: center;
         flex-wrap: wrap;
+        flex-direction: column;
+
     }
 }
+
+ */

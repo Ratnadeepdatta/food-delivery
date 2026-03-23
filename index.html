@@ -1,13 +1,66 @@
-    <!DOCTYPE html>
+   <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menuzy | Cooking</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/global.css">
+  <link rel="stylesheet" href="./pages/home/hero/hero.css">
+  <link rel="stylesheet" href="./components/popup/popup.css">
+</head>
+
+<body>
+
+  <div id="header-container"></div>
+
+  <div id="hero-container"></div>
+  <div id="menu-container"></div>
+  <div id="about-container"></div>
+  <div id="shop-container"></div>
+  <div id="right-container"></div>
+  <div id="testimonial-container"></div>
+  <div id="homeBlogSection"></div>
+  <div id="h-contact"></div>
+
+  <div id="footer"></div>
+
+  <div id="popup-container"></div>
+<script>
+fetch('./components/popup/popup.html')
+  .then(res => res.text())
+  .then(data => {
+    const container = document.getElementById('popup-container');
+    container.innerHTML = data;
+
+    // ✅ INIT CART AFTER POPUP LOAD
+    console.log("Popup Loaded ✅");
+  });
+</script>
+
+  <script src="./assets/blog-data.js"></script>
+  <script src="./assets/layout.js"></script>
+  <script src="./assets/sectionLoader.js" defer></script>
+  <script src="./pages/home/hero/hero.js" defer></script>
+  <script src="./components/popup/popup.js" defer></script>
+
+</body>
+
+</html>
+   
+   
+   <!-- ================  Old code ============================== -->
+   
+   <!-- <!DOCTYPE html>
     <html lang="en">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Menuzy | Cooking</title>
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
             <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/global.css">
         <link rel="stylesheet" href="pages/home/hero/hero.css">
@@ -36,8 +89,8 @@
 
         </div>
     </section> 
-        <!-- <div id="hero"></div> -->
-        <div id="header-container"></div>
+        <div id="hero"></div> 
+         <div id="header-container"></div>
         <div id="menu-container"></div>
         <div id="about-container"></div>
         <div id="shop-container"></div>
@@ -58,17 +111,17 @@ document.getElementById("popup-container").innerHTML = data;
 });
 </script>
 
-<script src="/components/popup/popup.js"></script>
+<script src="./components/popup/popup.js"></script>
 
 
     <script src="assets/sectionLoader.js" defer></script>
-        <script src="Pages/home/hero/hero.js" defer></script>
-        <script src="/assets/blog-data.js"></script>
-<script src="/assets/sectionLoader.js"></script>
-<script src="/assets/layout.js"></script>
+        <script src="pages/home/hero/hero.js" defer></script>
+        <script src="./assets/blog-data.js"></script> 
+ <script src="/assets/sectionLoader.js"></script>
+ <script src="./assets/layout.js"></script>
 
 
 
     </body>
 
-    </html>
+    </html>  -->

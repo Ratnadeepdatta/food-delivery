@@ -1,93 +1,131 @@
 
+  // window.loadSection = function (containerId, htmlPath, cssPath, jsPath) {
+  //   const container = document.getElementById(containerId);
 
-window.loadSection = function (containerId, htmlPath, cssPath, jsPath) {
-  const container = document.getElementById(containerId);
+  //   if (!container) {
+  //     console.warn(`Container not found: ${containerId}`);
+  //     return;
+  //   }
 
-  if (!container) {
-    console.warn(`Container not found: ${containerId}`);
-    return;
-  }
+  //   fetch(htmlPath)
+  //     .then(res => {
+  //       if (!res.ok) throw new Error(`Failed to load ${htmlPath}`);
+  //       return res.text();
+  //     })
+  //     .then(html => {
+  //       container.innerHTML = html;
 
-  fetch(htmlPath)
-    .then(res => {
-      if (!res.ok) throw new Error(`Failed to load ${htmlPath}`);
-      return res.text();
-    })
-    .then(html => {
-      container.innerHTML = html;
+  //       // ---------- CSS ----------
+  //       if (cssPath && !document.querySelector(`link[href="${cssPath}"]`)) {
+  //         const link = document.createElement("link");
+  //         link.rel = "stylesheet";
+  //         link.href = cssPath;
+  //         document.head.appendChild(link);
+  //       }
 
-      // ---------- CSS ----------
-      if (cssPath && !document.querySelector(`link[href="${cssPath}"]`)) {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = cssPath;
-        document.head.appendChild(link);
-      }
+  //       // ---------- JS ----------
+  //       if (jsPath && !document.querySelector(`script[src="${jsPath}"]`)) {
+  //         const script = document.createElement("script");
+  //         script.src = jsPath;
+  //         script.defer = true;
+  //         document.body.appendChild(script);
+  //       }
+  //     })
+  //     .catch(err => console.error(err));
+  // };
+  //==========================    New code ====================================
 
-      // ---------- JS ----------
-      if (jsPath && !document.querySelector(`script[src="${jsPath}"]`)) {
-        const script = document.createElement("script");
-        script.src = jsPath;
-        script.defer = true;
-        document.body.appendChild(script);
-      }
-    })
-    .catch(err => console.error(err));
-};
+  window.loadSection = function (containerId, htmlPath, cssPath, jsPath) {
+    const container = document.getElementById(containerId);
 
-document.addEventListener("DOMContentLoaded", () =>{
+    if (!container) {
+      console.warn(`Container not found: ${containerId}`);
+      return;
+    }
+
+    container.innerHTML = "Loading...";
+
+    fetch(htmlPath)
+      .then(res => {
+        if (!res.ok) throw new Error(`Failed to load ${htmlPath}`);
+        return res.text();
+      })
+      .then(html => {
+        container.innerHTML = html;
+
+        // CSS
+        if (cssPath && !document.querySelector(`link[href="${cssPath}"]`)) {
+          const link = document.createElement("link");
+          link.rel = "stylesheet";
+          link.href = cssPath;
+          document.head.appendChild(link);
+        }
+
+        // JS
+        if (jsPath && !document.querySelector(`script[src="${jsPath}"]`)) {
+          const script = document.createElement("script");
+          script.src = jsPath;
 
 
-    loadSection("footer",
-    "components/footer/footer.html",
-    "components/footer/footer.css",
-    "components/footer/footer.js",
-    )
-     loadSection("menu-container",
-    "pages/home/menu/menu.html",
-    "pages/home/menu/menu.css",
-    "pages/home/menu/menu.js",
-    )
-    
-    loadSection("about-container",
-      "pages/home/about/about.html",
-      "pages/home/about/about.css",
-      "pages/home/about/about.js",
-    ) 
-    loadSection("shop-container",
-      "pages/home/shop/shop.html",
-      "pages/home/shop/shop.css",
-      "pages/home/shop/shop.js",
-    )
-     loadSection("right-container",
-      "pages/home/right/right.html",
-      "pages/home/right/right.css",
-      "pages/home/right/right.js",
-    )
+          document.body.appendChild(script);
+                script.onload = () => {
+    if (typeof initMenu === "function") {
+      initMenu();
+    }
+  };
+        }
+      })
+      .catch(err => console.error(err));
+  };
 
-     loadSection("testimonial-container",
-      "pages/home/testimonial/testimonial.html",
-      "pages/home/testimonial/testimonial.css",
-      "pages/home/testimonial/testimonial.js",
-    )
+  document.addEventListener("DOMContentLoaded", () =>{
 
-loadSection(
-  "homeBlogSection",
-  "/pages/home/blog/h-blog.html",
-  "/pages/home/blog/h-blog.css",
-  "/pages/home/blog/h-blog.js"
-);
 
-loadSection(
-  "h-contact",
-  "/pages/home/contact/contact.html",
-  "/pages/home/contact/contact.css",
-  "/pages/home/contact/contact.js"
-);
+      loadSection("footer",
+      "components/footer/footer.html",
+      "components/footer/footer.css",
+      "components/footer/footer.js",
+      )
+      loadSection("menu-container",
+      "pages/home/menu/menu.html",
+      "pages/home/menu/menu.css",
+      "pages/home/menu/menu.js",
+      )
+      
+      loadSection("about-container",
+        "pages/home/about/about.html",
+        "pages/home/about/about.css",
+        "pages/home/about/about.js",
+      ) 
+      loadSection("shop-container",
+        "pages/home/shop/shop.html",
+        "pages/home/shop/shop.css",
+        "pages/home/shop/shop.js",
+      )
+      loadSection("right-container",
+        "pages/home/right/right.html",
+        "pages/home/right/right.css",
+        "pages/home/right/right.js",
+      )
 
-    //  loadSection("homeBlogContainer",
-    //   "pages/home/homeBlogContainer/homeBlogContainer.html",
-    //   "pages/home/homeBlogContainer/homeBlogContainer.css",
-    //   "pages/home/homeBlogContainer/homeBlogContainer.js",
-    // )
-}) 
+      loadSection("testimonial-container",
+        "pages/home/testimonial/testimonial.html",
+        "pages/home/testimonial/testimonial.css",
+        "pages/home/testimonial/testimonial.js",
+      )
+
+  loadSection(
+    "homeBlogSection",
+    "/pages/home/blog/h-blog.html",
+    "/pages/home/blog/h-blog.css",
+    "/pages/home/blog/h-blog.js"
+  );
+
+  loadSection(
+    "h-contact",
+    "/pages/home/contact/contact.html",
+    "/pages/home/contact/contact.css",
+    "/pages/home/contact/contact.js"
+  );
+
+  }); 
