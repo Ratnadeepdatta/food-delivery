@@ -1,0 +1,49 @@
+
+.menu-hero {
+  padding: 100px 20px;
+  background-image: url("../../assets/images/hero-bg02.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+
+.menu-commondiv{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  
+}
+.menu-sub-title-h1 {
+  font-size: 18px;
+  padding-top: 50px;
+  color:var(--btn-bg);
+}
+
+.menu-main-title-h2 {
+  font-size: 41px;
+  padding: 0px;
+  color: var(--hero-title);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Mobile */
+@media(max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 480px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
