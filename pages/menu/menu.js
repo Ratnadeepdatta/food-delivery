@@ -14,12 +14,8 @@ menuMainTitle.classList.add("menu-main-title-h2");
 menudiv.appendChild(menuMainTitle);
 
 
-// Menu section card code
-
-
   // ================= MENU INIT =================
   function initMenu() {
-    // console.log("menu.js working");
 
     const menuSection = document.getElementById("menu-container");
     if (!menuSection) return;
@@ -37,40 +33,43 @@ menudiv.appendChild(menuMainTitle);
     titleDiv.className = "section-title";
     titleDiv.innerHTML = `<h2>Popular Dishes</h2>`;
 
+
+    // ✅ NEW Veg Title Block
+const vegTitleDiv = document.createElement("div");
+vegTitleDiv.className = "section-title";
+
+// subtitle
+const subTitle = document.createElement("p");
+subTitle.className = "sub-title";
+subTitle.innerText = "Our Special";
+
+// main title
+const vegTitle = document.createElement("h2");
+vegTitle.innerText = "Veg Items";
+
+// append text inside div
+vegTitleDiv.appendChild(subTitle);
+vegTitleDiv.appendChild(vegTitle);
+
     const grid = document.createElement("div");
     grid.className = "menu-grid";
-   
-    // ================= STAR RATING FIX =================
-  document.addEventListener("click", function (e) {
 
-    if (e.target.matches(".star-rating i")) {
-
-      const clickedStar = e.target;
-      const value = clickedStar.getAttribute("data-value");
-
-      const parent = clickedStar.parentElement;
-      const allStars = parent.querySelectorAll("i");
-
-      allStars.forEach(star => {
-        if (star.getAttribute("data-value") <= value) {
-          star.classList.remove("fa-regular");
-          star.classList.add("fa-solid");
-        } else {
-          star.classList.remove("fa-solid");
-          star.classList.add("fa-regular");
-        }
-      });
-
-    }
-
-  });
-
+ 
     // ================= DATA =================
     const foods = [
       { name: "Cheese Burger", price: 299, img: "../../assets/images/promo01.webp" },
       { name: "Pizza Slice", price: 299, img: "../../assets/images/promo02.webp" },
       { name: "Grilled Chicken", price: 299, img: "../../assets/images/promo03.webp" },
       { name: "French Fries", price: 299, img: "../../assets/images/promo04.webp" },
+      { name: "Srench Fries", price: 299, img: "../../assets/images/promo02.webp" },
+      { name: "Srench Fries", price: 299, img: "../../assets/images/promo02.webp" },
+      { name: "Srench Fries", price: 299, img: "../../assets/images/promo02.webp" },
+      { name: "Srench Fries", price: 299, img: "../../assets/images/promo02.webp" },
+      { name: "Srench Fries", price: 299, img: "../../assets/images/promo02.webp" },
+      { name: "Srench Fries", price: 299, img: "../../assets/images/promo02.webp" },
+      { name: "Srench Fries", price: 299, img: "../../assets/images/promo02.webp" },
+      { name: "Srench Fries", price: 299, img: "../../assets/images/promo02.webp" },
+      { name: "Srench Fries", price: 299, img: "../../assets/images/promo02.webp" },
       { name: "Srench Fries", price: 299, img: "../../assets/images/promo02.webp" }
     ];
 
@@ -98,7 +97,7 @@ menudiv.appendChild(menuMainTitle);
           </div>
 
           <span class="price">
-            <i class="fa-solid fa-indian-rupee-sign"></i> ${food.price}
+            <i class="fa-solid fa-indian-rupee-sign"></i> ${food.price} 
           </span>
 
           <button class="add-cart">Add to cart</button>
@@ -108,8 +107,6 @@ menudiv.appendChild(menuMainTitle);
       grid.appendChild(card);
     });
 
-  
-
     container.appendChild(titleDiv);
     container.appendChild(grid);
     section.appendChild(container);
@@ -117,102 +114,32 @@ menudiv.appendChild(menuMainTitle);
   }
 
 
-  // ================= GLOBAL CART =================
-  let cart = [];
+  // ================= STAR RATING FIX =================
+document.addEventListener("click", function (e) {
 
-  // ================= ADD TO CART =================
-  document.addEventListener("click", function(e) {
+  if (e.target.matches(".star-rating i")) {
 
-    const button = e.target.closest(".add-cart");
-    if (!button) return;
+    const clickedStar = e.target;
+    const value = clickedStar.getAttribute("data-value");
 
-    const card = button.closest(".food-card, .shop-card");
+    const parent = clickedStar.parentElement;
+    const allStars = parent.querySelectorAll("i");
 
-    const name = card.dataset.name;
-    const price = parseFloat(card.dataset.price);
-    const img = card.dataset.img;
-
-    const existing = cart.find(item => item.name === name);
-
-    if (existing) {
-      existing.qty++;
-    } else {
-      cart.push({
-        name,
-        price,
-        img,
-        qty: 1
-      });
-    }
-
-    console.log("Cart:", cart);
-
-    const cartCount = document.getElementById("cart-count");
-    const cartItems = document.getElementById("cart-items");
-    const cartTotal = document.getElementById("cart-total");
-
-    if (cartCount && cartItems && cartTotal) {
-      updateCart(cartCount, cartItems, cartTotal);
-    }
-  });
-
-
-  // ================= UPDATE CART =================
-  function updateCart(cartCount, cartItems, cartTotal) {
-
-    cartItems.innerHTML = "";
-
-    let total = 0;
-    let count = 0;
-
-    cart.forEach((item, index) => {
-
-      total += item.price * item.qty;
-      count += item.qty;
-
-      cartItems.innerHTML += `
-        <div class="cart-item">
-
-          <img src="${item.img}" width="40">
-
-          <div class="popup-pric">
-            <p>${item.name}</p>
-            <p class="popup-items-price">
-              <i class="fa-solid fa-indian-rupee-sign"></i> ${item.price}
-            </p>
-          </div>
-
-          <div class="popup-btn">
-            <button onclick="changeQty(${index},-1)">-</button>
-            ${item.qty}
-            <button onclick="changeQty(${index},1)">+</button>
-          </div>
-
-        </div>
-      `;
+    allStars.forEach(star => {
+      if (star.getAttribute("data-value") <= value) {
+        star.classList.remove("fa-regular");
+        star.classList.add("fa-solid");
+      } else {
+        star.classList.remove("fa-solid");
+        star.classList.add("fa-regular");
+      }
     });
 
-    cartCount.innerText = count;
-    cartTotal.innerText = total.toFixed(2);
   }
 
+});
 
-  // ================= CHANGE QTY =================
-  function changeQty(index, change) {
-
-    cart[index].qty += change;
-
-    if (cart[index].qty <= 0) {
-      cart.splice(index, 1);
-    }
-
-    const cartCount = document.getElementById("cart-count");
-    const cartItems = document.getElementById("cart-items");
-    const cartTotal = document.getElementById("cart-total");
-
-    updateCart(cartCount, cartItems, cartTotal);
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   initMenu();
 });
+

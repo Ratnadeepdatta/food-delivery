@@ -7,11 +7,16 @@
     <title>Menu</title>
    <link rel="stylesheet" href="../../assets/global.css">
    <link rel="stylesheet" href="menu.css">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="../../components/popup/popup.css">
+
+
 </head>
 <body>
     <div id="header-container"></div>
+    
 
-  <section class="menu-hero">
+  <section class="menu-hero"> 
     <div class="container menu-commondiv" id="menu-commondiv"></div>
 
   </section>
@@ -20,9 +25,44 @@
 
   <div id="footer"></div>
 
+  <div id="popup-container"></div>
+
+  <script>
+fetch('../../components/popup/popup.html')
+  .then(res => res.text())
+  .then(data => {
+    const container = document.getElementById('popup-container');
+
+    if (container) {
+      container.innerHTML = data;
+    }
+
+    //  LOAD CSS
+    if (!document.querySelector('link[href="../../components/popup/popup.css"]')) {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "../../components/popup/popup.css";
+      document.head.appendChild(link);
+    }
+
+    //  LOAD JS
+    if (!document.querySelector('script[src="../../components/popup/popup.js"]')) {
+      const script = document.createElement("script");
+      script.src = "../../components/popup/popup.js";
+      document.body.appendChild(script);
+    }
+
+    console.log("Popup Loaded");
+  })
+  .catch(err => console.error("Popup load error:", err));
+</script>
+
+
   <script src="../../assets/layout.js"></script>
  <script src="../../assets/sectionLoader.js"></script>
  <script src="menu.js" defer></script>
+ <script src="../../assets/cart.js"></script>
+
 </body>
 </html>
 

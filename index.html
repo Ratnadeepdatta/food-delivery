@@ -18,7 +18,8 @@
   <div id="header-container"></div>
 
   <div id="hero-container"></div>
-  <div id="menu-container"></div>
+  <div id="home-menu-container"></div>
+  <!-- <div id="menu-container"></div> -->
   <div id="about-container"></div>
   <div id="shop-container"></div>
   <div id="right-container"></div>
@@ -29,16 +30,37 @@
   <div id="footer"></div>
 
   <div id="popup-container"></div>
+
 <script>
-fetch('./components/popup/popup.html')
+fetch('/components/popup/popup.html')
   .then(res => res.text())
   .then(data => {
     const container = document.getElementById('popup-container');
-    container.innerHTML = data;
+
+    if (container) {
+      container.innerHTML = data;
+    }
+
+    // ✅ LOAD CSS
+    if (!document.querySelector('link[href="/components/popup/popup.css"]')) {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "/components/popup/popup.css";
+      document.head.appendChild(link);
+    }
+
+    // ✅ LOAD JS
+    if (!document.querySelector('script[src="/components/popup/popup.js"]')) {
+      const script = document.createElement("script");
+      script.src = "/components/popup/popup.js";
+      document.body.appendChild(script);
+    }
 
     console.log("Popup Loaded");
-  });
+  })
+  .catch(err => console.error("Popup load error:", err));
 </script>
+
 
   <script src="./assets/blog-data.js"></script>
   <script src="./assets/layout.js"></script>
@@ -46,6 +68,7 @@ fetch('./components/popup/popup.html')
   <script src="./pages/home/hero/hero.js" defer></script>
   <script src="./components/popup/popup.js" defer></script>
 <script src="./pages/home/about/habout.js" defer></script>
+<script src="/assets/cart.js"></script>
 
 </body>
 
