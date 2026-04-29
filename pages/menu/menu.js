@@ -32,24 +32,7 @@ menudiv.appendChild(menuMainTitle);
     const titleDiv = document.createElement("div");
     titleDiv.className = "section-title";
     titleDiv.innerHTML = `<h2>Popular Dishes</h2>`;
-
-
-    // ✅ NEW Veg Title Block
-const vegTitleDiv = document.createElement("div");
-vegTitleDiv.className = "section-title";
-
-// subtitle
-const subTitle = document.createElement("p");
-subTitle.className = "sub-title";
-subTitle.innerText = "Our Special";
-
-// main title
-const vegTitle = document.createElement("h2");
-vegTitle.innerText = "Veg Items";
-
-// append text inside div
-vegTitleDiv.appendChild(subTitle);
-vegTitleDiv.appendChild(vegTitle);
+    
 
     const grid = document.createElement("div");
     grid.className = "menu-grid";
@@ -78,7 +61,7 @@ vegTitleDiv.appendChild(vegTitle);
       const card = document.createElement("div");
       card.className = "food-card slide";
 
-      // ✅ IMPORTANT (used in cart logic)
+      //  IMPORTANT (used in cart logic)
       card.dataset.name = food.name;
       card.dataset.price = food.price;
       card.dataset.img = food.img;

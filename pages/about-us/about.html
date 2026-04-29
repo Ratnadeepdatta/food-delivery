@@ -4,55 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
+    <link rel="stylesheet" href="../../assets/global.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="../../components/popup/popup.css">
+
 </head>
 <body>
-    
     <div id="header-container"></div>
 
-    <section class="blogmain"> 
-  <div class="container blog-commondiv" id="blog-commondiv"></div> 
-</section>
+    <section class="about-hero">
+        <div class="container about-maindiv" id="about-maindiv"></div>
+    </section>
 
     <div id="footer"></div>
 
-<section class="section-about">
-    <div class="container about">
-        <div class="about-image">
-            <img src="assets/images/about01.webp" alt="About Image">
-            <div class="offers">
-                <div class="offer-texts">
-                    <h3>Get Up To</h3>
-                    <h4><span>50%</span><br> Off Now</h4>
-                </div>
-            </div>
-        </div>
+<div id="popup-container"></div>
 
-        <div class="about-alltext">
-            <h2>Caferio, Burgers, and <br>Best Pizzas <span>in Town!</span></h2>
-            <p>The restaurants in Hangzhou also catered to many northern Chinese who had fled south from Kaifeng during
-                the Jurchen invasion of the 1120s, while it is also known that many restaurants were run by families.
-            </p>
+  <script>
+fetch('../../components/popup/popup.html')
+  .then(res => res.text())
+  .then(data => {
+    const container = document.getElementById('popup-container');
 
-            <ul class="feature-list">
-             <li>
-                <i class="fa-solid fa-check"></i> Delicious & Healthy Foods
-             </li> 
-             <li>
-                <i class="fa-solid fa-check"></i> Spacific Family And Kids Zone
-             </li> 
-             <li>
-                <i class="fa-solid fa-check"></i> Music & Other Facilities
-             </li> 
-             <li>
-                <i class="fa-solid fa-check"></i> Fastest Food Home Delivery
-             </li>
-            </ul>
-            <button class="hero-btn">Order Now</button>
-        </div>
+    if (container) {
+      container.innerHTML = data;
+    }
 
-    </div>
+    //  LOAD CSS
+    if (!document.querySelector('link[href="../../components/popup/popup.css"]')) {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "../../components/popup/popup.css";
+      document.head.appendChild(link);
+    }
 
-</section>
+    //  LOAD JS
+    if (!document.querySelector('script[src="../../components/popup/popup.js"]')) {
+      const script = document.createElement("script");
+      script.src = "../../components/popup/popup.js";
+      document.body.appendChild(script);
+    }
 
+    console.log("Popup Loaded");
+  })
+  .catch(err => console.error("Popup load error:", err));
+    </script>
+<script src="../../assets/layout.js"></script>
+<script src="../../assets/sectionLoader.js"></script>
+<script src="about.js" defer></script>
 </body>
 </html>

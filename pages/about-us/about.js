@@ -1,14 +1,13 @@
+// =================  This is for about hero section  ===================
 
+const aboutMain = document.getElementById("about-maindiv");
 
-const blogdiv = document.getElementById("blog-commondiv");
+const aboutSubTitle = document.createElement("h1");
+aboutSubTitle.textContent = "Abuout Us";
+aboutSubTitle.classList.add ("about-subtitle-h1");
 
-const blogSubTitle = document.createElement("h1");
-blogSubTitle.textContent = "Recent Post";
-blogSubTitle.classList.add("blog-sub-title-h1")
+aboutMain.appendChild(aboutSubTitle);
 
-const blogMainTitle = document.createElement("h2");
-blogMainTitle.textContent = "Book of Recipes and Cooking Tips!"
-blogMainTitle.classList.add("blog-main-title-h2")
-
-blogdiv.appendChild(blogSubTitle);
-blogdiv.appendChild(blogMainTitle);
+const aboutMainTitle = document.createElement("h2");
+aboutMainTitle.textContent = "Experience The Taste of Italian Food";
+aboutMainTitle.classList ("about-main-title-h2");
