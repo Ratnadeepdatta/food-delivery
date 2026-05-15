@@ -1,4 +1,4 @@
-console.log("about.js working ✅");
+
 
 document.addEventListener("DOMContentLoaded", () => {
 

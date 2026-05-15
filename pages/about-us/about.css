@@ -1,4 +1,156 @@
+.about-hero {
+    padding: 100px 20px;
+    background-image: url("../../assets/images/hero-bg02.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+}
 
 .about-maindiv {
-    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
 }
+
+.about-subtitle-h1 {
+    font-size: 18px;
+    padding-top: 50px;
+    color: var(--btn-bg);
+}
+
+.about-main-title-h2 {
+    font-size: 41px;
+    padding: 0px;
+    color: var(--hero-title);
+}
+
+/*  ===========  2nd section  ================= */
+
+.about-first-section {
+    padding: 50px 20px;
+}
+
+.about-firstdiv {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.about-left-img {
+    width: 50%;
+}
+
+.about-left-image {
+    border-radius: 30px;
+    transition: all 0.3s;
+    border-bottom: 5px solid red;
+    border-right: 5px solid var(--btn-bg);
+}
+
+.about-left-image:hover {
+    transform: translateY(-10px);
+}
+
+/* ========================  for text css  ================= */
+
+.about-right-text-div {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+
+.about-right-text-h2 {
+    font-size: 37px;
+}
+
+.about-right-text-h2 span {
+    color: var(--btn-bg);
+}
+
+.about-btn1 {
+    padding: 12px 30px;
+}
+
+.about-btn1 {
+  padding: 12px 30px;
+  background: var(--btn-bg);
+  color: var(--white);
+  border: none;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  align-self: self-start; 
+}
+.about-btn1:hover{
+    transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4);
+}
+
+/* ==================  This are for 2nd section  =================== */
+.about-secend-section{
+    background-color: var(--bg-gray);
+    padding: 50px 20px;
+}
+.about-secenddiv{
+    text-align: center;
+}
+.secend-section-title-h2{
+    font-size: 37px;
+}.secend-section-title-h2 span{
+    color: var(--btn-bg);
+}
+.secend-section-text-p{
+    padding: 20px 0px;
+    line-height: 26px;
+}
+
+/* =============  This are code for Grid section  =============== */
+.about-secend-griddiv{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.chef-card{
+  position: relative;
+  overflow: hidden;
+}
+
+.chef-image{
+  width: 100%;
+  display: block;
+  height: 450px;
+  object-fit: cover;
+}
+
+.chef-content{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #ff5a1f;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.chef-name{
+  color: white;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.chef-role{
+  color: white;
+  font-size: 18px;
+}
+
