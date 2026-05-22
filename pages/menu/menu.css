@@ -1,6 +1,6 @@
 
     .menu-hero {
-      padding: 100px 20px;
+      padding: 100px 15px;
       background-image: url("../../assets/images/hero-bg02.webp");
       background-position: center;
       background-size: cover;
@@ -15,7 +15,6 @@
       flex-direction: column;
       text-align: center;
       gap: 20px;
-      
     }
     .menu-sub-title-h1 {
       font-size: 18px;
@@ -36,19 +35,21 @@
     }
 
     .food-carousel{
-      background: var(--hero-title);
-      padding: 50px 20px;
+      padding: 50px 0px;
     }
-
+.menu-container{
+  background-color: bisque;
+}
     .home-menu-container{
       display: flex;
       flex-direction: column;
       gap: 40px;
       padding: 0px;
+    
     }
 
     .section-title h2 {
-      font-size: 30px;
+      font-size: 32px;
       font-weight: 600;
       text-align: center;
   }
@@ -113,19 +114,26 @@
   }
 
     @media(max-width: 768px) {
+      .menu-hero {
+      /* padding: 100px 15px; */
+      height: 45vh;
+    }
+.menu-sub-title-h1 {
+      padding-top: 35px;
+    }
 .menu-main-title-h2 {
-      font-size: 37px;
+      font-size: 30px;
       padding: 0px;
       color: var(--hero-title);
     }
      
      .section-title h2 {
-      font-size: 30px;
+      font-size: 27px;
   }
 
 .food-carousel{
-      background: var(--hero-title);
-      padding: 50px 13px;
+      
+      padding: 50px 0px;
     }
 
       .menu-grid {

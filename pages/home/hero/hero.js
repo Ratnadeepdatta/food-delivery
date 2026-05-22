@@ -59,8 +59,7 @@ function loadHeroCSS (){
 .hero-btn:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4);
-
-}
+};
 
 .hero-image {
   flex: 1;

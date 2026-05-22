@@ -4,13 +4,13 @@ const aboutMain = document.getElementById("about-maindiv");
 
 const aboutSubTitle = document.createElement("h1");
 aboutSubTitle.textContent = "Abuout Us";
-aboutSubTitle.classList.add ("about-subtitle-h1");
+aboutSubTitle.classList.add("about-subtitle-h1");
 
 aboutMain.appendChild(aboutSubTitle);
 
 const aboutMainTitle = document.createElement("h2");
 aboutMainTitle.innerHTML = "Experience The Taste <br> of Italian Food";
-aboutMainTitle.classList.add ("about-main-title-h2");
+aboutMainTitle.classList.add("about-main-title-h2");
 
 aboutMain.appendChild(aboutMainTitle);
 
@@ -29,7 +29,7 @@ aboutLeft.appendChild(aboutLeftImg);
 const aboutRight = document.getElementById("about-right-text-div");
 
 const aboutRightText = document.createElement("h2");
-aboutRightText.innerHTML = "Caferio, Burgers, And <br>Best Pizzas <span> in Town </span>";
+aboutRightText.innerHTML = "Caferio, Burgers, And <br> Best Pizzas <span> in Town </span>";
 aboutRightText.classList.add("about-right-text-h2");
 
 aboutRight.appendChild(aboutRightText);
@@ -50,6 +50,10 @@ const aboutBtn = document.createElement("button");
 aboutBtn.innerHTML = "Order Now";
 aboutBtn.classList.add("about-btn1");
 
+aboutBtn.addEventListener("click", ()=>{
+  window.location.href = "../menu/menu.html";
+})
+
 aboutRight.appendChild(aboutBtn);
 
 // ====================  This is 2nd section  ===================
@@ -63,7 +67,7 @@ secenddivText.classList.add("secend-section-title-h2");
 secendTextDiv.appendChild(secenddivText);
 
 const secendSectionTextP = document.createElement("p");
-secendSectionTextP.innerHTML = "Food is any substance consumed to provide nutritional <br>support for an organism.";
+secendSectionTextP.innerHTML = "Food is any substance consumed to provide nutritional support for an organism.";
 secendSectionTextP.classList.add("secend-section-text-p");
 
 secendTextDiv.appendChild(secendSectionTextP)
@@ -75,25 +79,25 @@ const aboutSecendGridDiv = document.getElementById("about-secend-griddiv");
 
 const chefData = [
   {
-    image: "./images/chef-1.jpg",
+    image: "../../../assets/images/team-01.webp",
     name: "Charles Richard",
     role: "Executive Chef"
   },
 
   {
-    image: "./images/chef-2.jpg",
+    image: "../../../assets/images/team-02.webp",
     name: "Robert William",
     role: "Head Chef"
   },
 
   {
-    image: "./images/chef-3.jpg",
+    image: "../../../assets/images/team-03.webp",
     name: "Thomas Josef",
     role: "Junior Chef"
   },
 
   {
-    image: "./images/chef-4.jpg",
+    image: "../../../assets/images/team-04.webp",
     name: "Mike Albatson",
     role: "Kitchen Porter"
   }
@@ -135,5 +139,103 @@ chefData.forEach((item) => {
 
   // Append Card into Grid
   aboutSecendGridDiv.appendChild(chefCard);
+
+});
+
+// =================  3rd section for testimonial  ======================
+
+fetch("../home/testimonial/testimonial.html")
+  .then(response => response.text())
+  .then(data => {
+
+    document.getElementById("testimonial-section").innerHTML = data;
+
+    const script = document.createElement("script");
+
+    script.src = "../home/testimonial/testimonial.js";
+
+    script.onload = () => {
+      loadReviews();
+    };
+
+    document.body.appendChild(script);
+
+  });
+
+// ================  4th section for order number  ======================
+const orderNumber = document.getElementById("order-number-left")
+
+const orderHeading = document.createElement("h2");
+orderHeading.innerHTML = "A Moments Of Delivered <br> On <span>Right Time </span> & Place";
+orderHeading.classList.add("order-heading-h2");
+orderNumber.appendChild(orderHeading);
+
+const orderpara = document.createElement("p");
+orderpara.textContent = "The restaurants in Hangzhou also catered to many northern Chinese who had fled south from Kaifeng during the Jurchen invasion of the 1120s, while it is also known that many restaurants were run by families";
+orderpara.classList.add("order-para-p");
+orderNumber.appendChild(orderpara);
+// ==========  order Button div  =============
+const orderDiv = document.createElement("div");
+orderDiv.classList.add("order-content-div");
+
+const orderBtn = document.createElement("button");
+orderBtn.textContent = "Order Now";
+orderBtn.classList.add("hero-btn");
+
+orderDiv.appendChild(orderBtn);
+// orderNumber.appendChild(orderDiv)
+
+const ordNumber = document.createElement("h4");
+ordNumber.classList.add("ord-number-text");
+
+const phoneIcon = document.createElement("i");
+phoneIcon.classList.add("fa-solid", "fa-phone");
+
+ordNumber.textContent = "8974287067";
+
+orderDiv.appendChild(ordNumber);
+orderNumber.appendChild(orderDiv)
+
+
+// ============  This is right side image box  =============
+
+// const orderImageRight = document.getElementById("order-image-right");
+
+// const orderImage = document.createElement("img");
+// orderImage.src = "../../../assets/images/delivery-boy.svg"
+// orderImage.classList.add("order-right-image");
+// orderImageRight.appendChild(orderImage)
+
+// =============    scrolling  ==========================
+
+const orderImageRight = document.getElementById("order-image-right");
+
+const orderImage = document.createElement("img");
+
+orderImage.src = "../../../assets/images/delivery-boy.svg";
+
+orderImage.classList.add("order-right-image");
+
+orderImageRight.appendChild(orderImage);
+
+
+// smooth scroll animation
+window.addEventListener("scroll", () => {
+
+    // section position
+    const sectionTop = orderImageRight.offsetTop;
+
+    // current scroll
+    const scrollPosition = window.scrollY;
+
+    // movement speed
+    let moveValue = (scrollPosition - sectionTop) * 0.15;
+
+    // limit movement
+    if (moveValue < -30) moveValue = -30;
+    if (moveValue > 50) moveValue = 50;
+
+    // move image
+    orderImage.style.transform = `translateX(${moveValue}px)`;
 
 });

@@ -9,7 +9,7 @@ menuSubTitle.classList.add ("menu-sub-title-h1");
 menudiv.appendChild(menuSubTitle);
 
 const menuMainTitle = document.createElement("h2");
-menuMainTitle.innerHTML = "Welcome To Our Mega <br> Menu List";
+menuMainTitle.innerHTML = "Welcome To Our Mega Menu";
 menuMainTitle.classList.add("menu-main-title-h2");
 menudiv.appendChild(menuMainTitle);
 

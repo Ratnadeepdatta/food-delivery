@@ -2,19 +2,40 @@
 const reviews = JSON.parse(localStorage.getItem("reviews")) || [
 
   {
-    name: "Sneha",
+    name: "Rajni",
     rating: 5,
     text: "Amazing food and fast delivery. Loved it!",
     image: "https://i.pravatar.cc/100?img=1"
   },
 
   {
-    name: "Raj",
+    name: "Ranjit",
     rating: 4,
     text: "Very good service and tasty food.",
     image: "https://i.pravatar.cc/100?img=2"
-  }
-
+  },
+  {
+    name: "Datta",
+    rating: 4,
+    text: "Very good service and tasty food.",
+    image: "https://i.pravatar.cc/100?img=2"
+  },
+  {
+    name: "Hiraj",
+    rating: 4,
+    text: "Very good service and tasty food.",
+    image: "https://i.pravatar.cc/100?img=2"
+  },{
+    name: "Sujon",
+    rating: 4,
+    text: "Very good service and tasty food.",
+    image: "https://i.pravatar.cc/100?img=2"
+  },{
+    name: "Krish",
+    rating: 4,
+    text: "Very good service and tasty food.",
+    image: "https://i.pravatar.cc/100?img=2"
+  },
 ];
 
 function loadReviews() {
@@ -80,7 +101,6 @@ function generateStars(rating) {
 function openReviewPopup() {
 
   document.getElementById("reviewPopup").style.display = "flex";
-
 }
 
 function closeReviewPopup() {
@@ -162,6 +182,5 @@ function postReview() {
   closeReviewPopup();
 
 }
-
 
 
