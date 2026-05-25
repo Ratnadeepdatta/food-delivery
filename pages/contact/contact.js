@@ -52,10 +52,12 @@ cntSection.appendChild(contentDiv);
 const btnWrapper = document.createElement("div");
 btnWrapper.classList.add("cnt-section-btn");
 
-const orderBtn = document.createElement("a");
-orderBtn.classList.add("order-btn");
-orderBtn.href = "#";
-orderBtn.textContent = "Order Now"
+const orderBtn = document.createElement("button");
+orderBtn.textContent = "Order Now";
+orderBtn.classList.add("hero-btn");
+orderBtn.addEventListener("click",()=>{
+  window.location.href ="../../pages/menu/menu.html"
+})
 
 btnWrapper.appendChild(orderBtn)
 contentDiv.appendChild(btnWrapper)
@@ -84,19 +86,22 @@ const style = document.createElement("style");
 style.textContent = `
 
 .contact-div{
-  padding: 100px 20px 20px ;
+  padding: 100px 20px ;
   background-image: url("../../../assets/images/hero-bg02.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 45vh;
+  min-height:420px;
   display: flex;
+   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: hidden;
 }
 
 .contact-subtitle-h1{
   font-size: 18px;
+  padding-top: 50px;
   color: var(--btn-bg);
   margin-bottom: 10px;
 }
@@ -267,12 +272,20 @@ style.textContent = `
 
 
 @media (max-width: 768px){
-
+     .contact-div{
+     min-height:180px;
+     }
     .cnt-2nd-section{
         flex-direction: column;
         text-align: center;
          background-color: var(--bg-gray)
     }
+.contact-subtitle-h1{
+  padding-top: 35px;
+}
+.contact-maintitle{
+font-size: 30px;
+}
 .cnt-2nd-content h2{
     font-size: 25px;
 }

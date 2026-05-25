@@ -21,6 +21,17 @@ body{
     background: #ffffff;
     color: var(--lead);
     font-family: "Poppins", sans-serif;
+     opacity: 1;
+       transition: opacity 0.25s ease-in-out;
+        overflow-x: hidden;
+}
+body.page-loaded {
+    opacity: 1;
+}
+
+body.page-exit {
+    opacity: 0;
+    transform: translateY(0);
 }
 .container{
     max-width: 1400px;
@@ -51,3 +62,15 @@ html{
    transform: translateY(-4px);
   box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4);
 }
+
+/* body.page-exit {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+} */

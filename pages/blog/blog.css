@@ -4,7 +4,11 @@
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
-                height: 50vh;
+                 display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 420px;
+                overflow: hidden; 
             }
 
             .blog-commondiv {
@@ -143,18 +147,18 @@
             }
 
             @media (max-width:768px) {
-                .blogmain {
-                    height: 45vh;
-                    padding: 70px 0px 0px 0px;
+                .blogmain{
+                    min-height: 180px;
+                    /* padding: 70px 0px 0px 0px; */
                 }
 
                 .blog-sub-title-h1 {
                     font-size: 16px;
-                    padding-top: 60px;
+                    padding-top: 35px;
                 }
 
                 .blog-main-title-h2 {
-                    font-size: 37px;
+                    font-size: 30px;
                     padding: 0px;
                 }
 

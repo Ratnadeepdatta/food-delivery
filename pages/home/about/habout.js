@@ -85,7 +85,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // BUTTON
   const button = document.createElement("button");
   button.className = "hero-btn";
-  button.textContent = "Order Now";
+  button.textContent = "About Menuzy";
+
+  button.addEventListener("click", ()=>{
+    window.location.href= "../pages/about-us/about.html"
+  })
 
   // APPEND RIGHT SIDE
   aboutText.appendChild(heading);

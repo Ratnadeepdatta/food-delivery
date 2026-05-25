@@ -51,7 +51,7 @@ aboutBtn.innerHTML = "Order Now";
 aboutBtn.classList.add("about-btn1");
 
 aboutBtn.addEventListener("click", ()=>{
-  window.location.href = "../menu/menu.html";
+  window.location.href = "../../pages/menu/menu.html";
 })
 
 aboutRight.appendChild(aboutBtn);
@@ -181,6 +181,9 @@ orderDiv.classList.add("order-content-div");
 const orderBtn = document.createElement("button");
 orderBtn.textContent = "Order Now";
 orderBtn.classList.add("hero-btn");
+orderBtn.addEventListener("click",()=>{
+  window.location.href ="../../pages/menu/menu.html"
+})
 
 orderDiv.appendChild(orderBtn);
 // orderNumber.appendChild(orderDiv)
@@ -196,15 +199,6 @@ ordNumber.textContent = "8974287067";
 orderDiv.appendChild(ordNumber);
 orderNumber.appendChild(orderDiv)
 
-
-// ============  This is right side image box  =============
-
-// const orderImageRight = document.getElementById("order-image-right");
-
-// const orderImage = document.createElement("img");
-// orderImage.src = "../../../assets/images/delivery-boy.svg"
-// orderImage.classList.add("order-right-image");
-// orderImageRight.appendChild(orderImage)
 
 // =============    scrolling  ==========================
 

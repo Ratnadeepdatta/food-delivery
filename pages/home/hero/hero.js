@@ -7,13 +7,14 @@ function loadHeroCSS (){
     style.innerHTML=`
     
 .hero {
-  min-height: 100vh;
   background-image: url("./assets/images/hero-bg.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .hero-container {
@@ -73,6 +74,10 @@ function loadHeroCSS (){
 }
 
 @media (max-width: 768px) {
+.hero{
+  max-height:650px;
+}
+
   .hero-container {
     flex-direction: column;
     text-align: center;
@@ -97,10 +102,6 @@ function loadHeroCSS (){
      document.head.appendChild(style);
 }
 
-
-
-
-
 function loadHeroSection() {
   const container = document.getElementById("hero-container");
 
@@ -115,7 +116,7 @@ function loadHeroSection() {
           <p class="hero-desc">
             Enjoy our super delicious burger made with juicy grilled patty...
           </p>
-          <button class="hero-btn">Explore Menu</button>
+          <a href="../../pages/menu/menu.html"><button class="hero-btn">Explore Menu</button></a>
         </div>
 
         <div class="hero-image">

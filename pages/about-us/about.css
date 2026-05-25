@@ -4,7 +4,11 @@
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
-                height: 50vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 420px;
+                overflow: hidden;  
             }
 
             .about-maindiv {
@@ -249,7 +253,7 @@
 
             @media (max-width: 768px) {
                 .about-hero {
-                    height: 45vh;
+                    min-height: 180px;
                 }
 
                 .about-main-title-h2 {

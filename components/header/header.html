@@ -12,7 +12,7 @@
               <li><a href="/pages/about-us/about.html">About Us</a></li>
               <li><a href= "/pages/blog/blog.html">Blog</a></li>
               <li><a href="/pages/contact/contact.html">Contacts</a></li>
-              <a href="#" class="mbtn">Sign in <img src="/assets/icons/arrow-right.svg" alt="Sign"></a>
+              <a href="#" class="mbtn signin-btn">Sign in <img src="/assets/icons/arrow-right.svg" alt="Sign"></a>
             </ul>
           </nav>    
     
@@ -29,7 +29,7 @@
           <a href="#" class="cart-icon" id="cart-icon"> 
             <img src="/assets/icons/icon-bag.svg" alt="Bag">
             <span class="cart-value" id="cart-count">0</span></a>
-          <a href="#" class="mbtn">Sign in <img src="/assets/icons/arrow-right.svg" alt=""></a>
+          <a href="#" class="mbtn signin-btn">Sign in <img src="/assets/icons/arrow-right.svg" alt=""></a>
         </div>
 
         <div class="menu-toggle" id="menu-toggle">
@@ -40,5 +40,91 @@
         </div>
       </div>
     </header>
+
+
+    <!-- AUTH POPUP -->
+
+<div class="auth-popup" id="auth-popup">
+
+  <div class="auth-box">
+
+    <button class="close-popup" id="close-popup">
+      &times;
+    </button>
+
+
+    <!-- SIGN IN FORM -->
+
+    <div class="form-box signin-form active-form">
+
+      <h2>Sign In</h2>
+
+      <form>
+
+        <input type="email"
+               placeholder="Enter Email"
+               required>
+
+        <input type="password"
+               placeholder="Enter Password"
+               required>
+
+        <button type="submit" class="auth-btn">
+          Sign In
+        </button>
+
+      </form>
+
+      <p>
+        Don't have an account?
+
+        <span id="show-signup">
+          Sign Up
+        </span>
+      </p>
+
+    </div>
+
+
+
+    <!-- SIGN UP FORM -->
+
+    <div class="form-box signup-form">
+
+      <h2>Create Account</h2>
+
+      <form>
+
+        <input type="text"
+               placeholder="Full Name"
+               required>
+
+        <input type="email"
+               placeholder="Enter Email"
+               required>
+
+        <input type="password"
+               placeholder="Create Password"
+               required>
+
+        <button type="submit" class="auth-btn">
+          Sign Up
+        </button>
+
+      </form>
+
+      <p>
+        Already have an account?
+
+        <span id="show-signin">
+          Sign In
+        </span>
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
 
     

@@ -6,11 +6,13 @@
 .homeshops {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-self: center;
     gap: 30px;
 }
- .homeshops button {
-        align-self: center;
-    }
+ .hshops-btn{
+    align-self: center;
+ }
 
 .shop-textdiv {
     display: flex;
@@ -132,17 +134,26 @@
         padding: 40px 10px 70px 10px;
     }
 
-    /* .homeshops button {
-        align-self: center;
-    } */
+  .hshops-btn{
+  padding: 12px 24px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    /* .shop-textdiv {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
-                   } */
+.hshops-btn:hover{
+   transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4);
+}
+
     .shop-card {
         flex: 0 0 calc((100% - 20px) / 2);
         max-width: calc((100% - 20px) / 2);
