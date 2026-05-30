@@ -46,8 +46,8 @@
 }
 
 .shop-card {
-    flex: 0 0 calc((100% - 60px)/4);
-    max-width: calc((100% - 60px)/4);
+    flex: 0 0 calc((100% - 50px)/6);
+    max-width: calc((100% - 100px)/6);
     background: var(--white);
     padding: 30px;
     display: flex;
@@ -135,7 +135,6 @@
     }
 
   .hshops-btn{
-  padding: 12px 24px;
   background-color: orange;
   color: white;
   border: none;

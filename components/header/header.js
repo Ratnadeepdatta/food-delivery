@@ -134,3 +134,78 @@ showSignin.addEventListener("click", () => {
     signinForm.classList.add("active-form");
 
 });
+
+// =============  search code   ==================
+
+searchInput.addEventListener("keydown", (e) => {
+
+    if (e.key === "Enter") {
+
+        const value =
+            searchInput.value.toLowerCase();
+
+        const foods = [
+            "burger",
+            "pizza",
+            "pasta",
+            "biryani"
+        ];
+
+        if (foods.includes(value)) {
+
+            alert(`${value} found`);
+
+        } else {
+
+            alert("Food not found");
+
+        }
+
+    }
+
+});
+
+// const searchInput =
+//     document.getElementById("search-input");
+
+
+// searchInput.addEventListener("keypress", (e) => {
+
+//     if (e.key === "Enter") {
+
+//         const value =
+//             searchInput.value.toLowerCase().trim();
+
+        
+//         // search conditions
+
+//         if (value === "burger") {
+
+//             window.location.href =
+//                 "/pages/menu/menu.html";
+
+//         }
+
+//         else if (value === "pizza") {
+
+//             window.location.href =
+//                 "/pages/menu/menu.html";
+
+//         }
+
+//         else if (value === "contact") {
+
+//             window.location.href =
+//                 "/pages/contact/contact.html";
+
+//         }
+
+//         else {
+
+//             alert("Item not found");
+
+//         }
+
+//     }
+
+// });
