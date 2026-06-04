@@ -23,7 +23,7 @@ const homeBlogSection = document.getElementById("home-blog-section");
 const container = document.getElementById("homeBlogContainer");
 
 
-// Create section title
+// Create section title 
 
 const homeBlogTitle = document.createElement("h2");
 homeBlogTitle.innerHTML = 'Discover <span class="highlight-text">New Recipes </span>';

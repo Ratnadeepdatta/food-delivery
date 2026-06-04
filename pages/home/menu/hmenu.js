@@ -28,7 +28,7 @@
   const prevBtn = document.createElement("button");
   prevBtn.className = "carousel-btn prev";
   prevBtn.innerHTML = "&#10094;";
-
+    
   const nextBtn = document.createElement("button");
   nextBtn.className = "carousel-btn next";
   nextBtn.innerHTML = "&#10095;";

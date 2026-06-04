@@ -20,6 +20,7 @@ const aboutLeft = document.getElementById("about-left-img");
 
 const aboutLeftImg = document.createElement("img")
 aboutLeftImg.src = "../../assets/images/about03.png";
+aboutLeftImg.alt = "About Food Image";
 aboutLeftImg.classList.add("about-left-image");
 
 aboutLeft.appendChild(aboutLeftImg);
@@ -207,6 +208,7 @@ const orderImageRight = document.getElementById("order-image-right");
 const orderImage = document.createElement("img");
 
 orderImage.src = "../../../assets/images/delivery-boy.svg";
+orderImage.alt = "Menuzy food delivery rider";
 
 orderImage.classList.add("order-right-image");
 

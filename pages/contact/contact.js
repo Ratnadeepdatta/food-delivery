@@ -26,7 +26,8 @@ const imgDiv = document.createElement("div")
 imgDiv.classList.add("cnt-img-div")
 
 const img = document.createElement("img")
-img.src = "../../../assets/images/contact-img01.webp"
+img.src = "../../../assets/images/contact-img01.webp";
+img.alt = "Contact Image";
 
 imgDiv.appendChild(img);
 
@@ -67,6 +68,7 @@ phoneDiv.classList.add("phone-div");
 
 const phoneIcon = document.createElement("img");
 phoneIcon.src = "../../../assets/icons/m-phone.svg";
+phoneIcon.alt= "Contact Phone Icon";
 phoneIcon.classList.add("ctn-phone-icon");
 
 phoneDiv.appendChild(phoneIcon);
@@ -360,6 +362,7 @@ mapDiv.classList.add("map-area");
 
 const map = document.createElement("iframe");
 map.src = "https://www.google.com/maps?q=bangalore&output=embed";
+map.alt = "Google Map";
 map.loading = "lazy";
 
 mapDiv.appendChild(map);

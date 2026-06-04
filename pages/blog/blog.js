@@ -104,7 +104,7 @@ function loadBlogs() {
       
       <h2 class="blog-article-h2">${selectedPost.title}</h2>
 
-      <img src="${selectedPost.image}" style="width:50%; margin:20px 0;">
+      <img src="${selectedPost.image}" style="width:50%; margin:20px 0;" alt="blog image">
 
       <div class="blog-meta">
         <span>${selectedPost.date}</span>

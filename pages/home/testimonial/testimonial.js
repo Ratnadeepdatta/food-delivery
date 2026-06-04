@@ -50,7 +50,7 @@ function loadReviews() {
 
 <div class="review-card">
 
-<img src="${review.image}">
+<img src="${review.image}" alt="${review.name} customer review">
 
 <h4>${review.name}</h4>
 
