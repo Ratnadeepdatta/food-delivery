@@ -70,7 +70,7 @@
             background: transparent;
             cursor: pointer;
         }
-
+        
         .read-more-btn:hover {
             color: var(--black);
         }
@@ -96,7 +96,7 @@
             padding: 12px 30px;
             text-decoration: none;
             border-radius: 18px;
-            color: var(--white);
+            color: var(--n-btn-text);
             transition: 0.3s;
         }
 

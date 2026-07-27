@@ -47,7 +47,7 @@ function loadHeroCSS (){
 .hero-btn {
   padding: 12px 30px;
   background: var(--btn-bg);
-  color: var(--white);
+  color: #1a1a1a;
   border: none;
   border-radius: 18px;
   font-size: 14px;
