@@ -75,11 +75,13 @@ nav ul li a:hover::after {
 }
 nav .mbtn{
   display: none;
-  color: var(--white);
+  /* color: var(--white); */
+  color:#1a1a1a;
   margin-top: 15px;
   text-decoration: none;
    padding: 10px 20px;
 }
+
 .menuicons {
   display: flex;
   justify-content: space-between;
@@ -88,7 +90,8 @@ nav .mbtn{
 }
 .menuicons a {
   text-decoration: none;
-  color: var(--white);
+  /* color: var(--white); */
+  color:#1a1a1a;
 }
 .hamburgar {
   display: none;
@@ -246,66 +249,45 @@ nav .mbtn{
 .auth-popup {
     position: fixed;
     inset: 0;
-
     background: rgba(0,0,0,0.6);
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     opacity: 0;
     visibility: hidden;
-
     transition: 0.3s ease;
-
     z-index: 9999;
 }
-
 
 .auth-popup.active {
     opacity: 1;
     visibility: visible;
 }
 
-
 .auth-box {
     background: #fff;
-
     width: 90%;
     max-width: 400px;
-
     border-radius: 20px;
-
     padding: 30px;
-
     position: relative;
-
     overflow: hidden;
-
     transform: translateY(30px);
-
     transition: 0.3s ease;
 }
-
 
 .auth-popup.active .auth-box {
     transform: translateY(0);
 }
-
-
 .close-popup {
     position: absolute;
     top: 10px;
     right: 15px;
-
     background: none;
     border: none;
-
     font-size: 28px;
-
     cursor: pointer;
 }
-
 
 .form-box {
     display: none;
@@ -313,17 +295,14 @@ nav .mbtn{
     gap: 20px;
 }
 
-
 .form-box.active-form {
     display: flex;
 }
-
 
 .form-box h2 {
     text-align: center;
     margin-bottom: 20px;
 }
-
 
 .form-box form {
     display: flex;
@@ -331,33 +310,22 @@ nav .mbtn{
     gap: 15px;
 }
 
-
 .form-box input {
     padding: 12px;
-
     border-radius: 10px;
     border: 1px solid #ddd;
-
     font-size: 15px;
 }
 
-
 .auth-btn {
     background: var(--btn-bg);
-
     color: #fff;
-
     border: none;
-
     padding: 12px;
-
     border-radius: 10px;
-
     cursor: pointer;
-
     font-size: 16px;
 }
-
 
 .form-box p {
     text-align: center;
@@ -366,9 +334,7 @@ nav .mbtn{
 
 .form-box span {
     color: var(--btn-bg);
-
     cursor: pointer;
-
     font-weight: 600;
 }
 
